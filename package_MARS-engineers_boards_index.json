@@ -8,13 +8,13 @@
       "platforms": [
         {
           "name": "MARS-engineers boards",
-          "architecture": "rp2040",
+          "architecture": "robotrix",
           "version": "1.0.0",
           "category": "Contributed",
           "url": "https://github.com/MARS-engineers/arduino-boards/releases/download/test/MARS-engineers-boards-test.zip",
           "archiveFileName": "MARS-engineers-boards-test.zip",
-          "checksum": "SHA-256:f7a41755b13c4d83cdcba18bc46d57f619492a6babf1afacc728e5bb3ad6c64b",
-          "size": "2201",
+          "checksum": "SHA-256:ac706af207c1fa67328c0fcd1e4b0e8ad8465f4797d386e5af98dd9a345bca8f",
+          "size": "2234",
           "boards": [
             {
               "name": "Robotrix Rover One V0.1"
