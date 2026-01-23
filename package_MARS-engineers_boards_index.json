@@ -12,8 +12,8 @@
           "category": "Contributed",
           "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.3.zip",
           "archiveFileName": "MARS-Engineers-boards-1.0.3.zip",
-          "checksum": "SHA-256:83956834173833d013ab77e9d0831a0d070a3d4c01fb891347121a5170bcbe95",
-          "size": "2640",
+          "checksum": "SHA-256:3e427ee757c6ff423d729bfb6fec48afb66b25332d6581dae3c6ccb39c53dbec",
+          "size": "2657",
           "boards": [
             {
               "name": "Robotrix Rover One V0.1"
