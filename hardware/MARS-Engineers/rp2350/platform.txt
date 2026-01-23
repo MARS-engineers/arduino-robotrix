@@ -1,0 +1,13 @@
+name=MARS Engineers boards
+version=1.0.0
+architecture=rp2040
+
+# Použijeme core z arduino-pico
+build.core=rp2040
+
+# Převzetí nástrojů z rp2040 balíčku
+runtime.tools.pqt-picotool.path={runtime.tools.pqt-picotool.path}
+runtime.tools.arm-none-eabi-gcc.path={runtime.tools.arm-none-eabi-gcc.path}
+
+# Povinné, jinak IDE spadne
+compiler.path={runtime.tools.arm-none-eabi-gcc.path}/bin/

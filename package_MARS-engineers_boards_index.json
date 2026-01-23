@@ -1,0 +1,38 @@
+{
+  "packages": [
+    {
+      "name": "MARS-Engineers",
+      "maintainer": "Matěj Mrkva",
+      "websiteURL": "https://github.com/MARS-engineers/",
+      "email": "matej.mrkva@mars-engineers.cz",
+      "platforms": [
+        {
+          "name": "MARS-engineers boards",
+          "architecture": "rp2040",
+          "version": "1.0.0",
+          "category": "Contributed",
+          "url": "https://github.com/MARS-engineers/arduino-boards/releases/download/1.0.0/MARS-engineers-boards-1.0.0.zip",
+          "archiveFileName": "MARS-engineers-boards-1.0.0.zip",
+          "checksum": "SHA-256:XXXXXXXXXXXXXXXX",
+          "size": "12345",
+          "boards": [
+            {
+              "name": "Robotrix Rover One V0.1"
+            },
+            {
+              "name": "Robotrix Rover One V2"
+            }
+          ],
+          "toolsDependencies": [],
+          "dependencies": [
+            {
+              "name": "rp2040",
+              "version": ">=3.6.0",
+              "packager": "earlephilhower"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
