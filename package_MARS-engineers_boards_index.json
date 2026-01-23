@@ -11,7 +11,7 @@
           "architecture": "rp2040",
           "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://github.com/MARS-engineers/arduino-boards/releases/download/test/MARS-engineers-boards-1.0.0.zip",
+          "url": "https://github.com/MARS-engineers/arduino-boards/releases/download/test/MARS-engineers-boards-1.0.1.zip",
           "archiveFileName": "MARS-engineers-boards-1.0.1.zip",
           "checksum": "SHA-256:b91d763ed4e500857f21ff803bbf2ec2173dc0a0013867b011c37045b89dcdbc",
           "size": "2615",
