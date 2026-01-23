@@ -20,17 +20,17 @@ rtro01.build.usb_product="Rover One v0.1"
 # -----------------------------------
 # Robotrix Rover One v2
 # -----------------------------------
-rtro2.name=Robotrix Rover One v2
+RoverOneV2.name=Robotrix Rover One v2
 
-rtro2.build.core=rp2040
-rtro2.build.variant=my_rp2350b
-rtro2.build.mcu=rp2350
-rtro2.build.f_cpu=150000000L
+RoverOneV2.build.core=rp2040
+RoverOneV2.build.variant=my_rp2350b
+RoverOneV2.build.mcu=rp2350
+rtRoverOneV2ro2.build.f_cpu=150000000L
 
-rtro2.upload.tool=picotool
-rtro2.upload.protocol=picotool
+RoverOneV2.upload.tool=picotool
+RoverOneV2.upload.protocol=picotool
 
-rtro2.build.usb_vid=0x2E8A
-rtro2.build.usb_pid=0x1234
-rtro2.build.usb_manufacturer="MARS-Engineers"
-rtro2.build.usb_product="Rover One v2"
+RoverOneV2.build.usb_vid=0x2E8A
+RoverOneV2.build.usb_pid=0x1234
+RoverOneV2.build.usb_manufacturer="MARS-Engineers"
+RoverOneV2.build.usb_product="Rover One v2"
