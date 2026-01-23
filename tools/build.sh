@@ -3,7 +3,7 @@ set -e
 
 VENDOR="MARS-Engineers"
 ARCH="robotrix"
-VERSION="1.0.0"
+VERSION="1.0.2"
 REPO_URL="https://github.com/MARS-Engineers/arduino-boards"
 JSON_OUT="package_MARS-engineers_boards_index.json"
 ZIP_NAME="${VENDOR}-boards-${VERSION}.zip"
@@ -12,12 +12,14 @@ RELEASE_URL="${REPO_URL}/releases/download/test/${ZIP_NAME}"
 ZIP_PATH="build/${ZIP_NAME}"
 rm -f "$ZIP_PATH"
 
-zip -rq $ZIP_PATH hardware/robotrix
+cd hardware
+zip -rq ../"$ZIP_PATH" robotrix
+cd ..
 
 SIZE=$(stat -c %s "$ZIP_PATH")
 SHA256=$(sha256sum "$ZIP_PATH" | awk '{print $1}')
 
-echo "Size: " $SIZE "sum: " $SHA256
+echo "Size: " $SIZE "Sum: " $SHA256
 
 sed \
   -e "s/__VERSION__/$VERSION/g" \
