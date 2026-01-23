@@ -3,16 +3,15 @@
     {
       "name": "MARS-Engineers",
       "maintainer": "Matěj Mrkva",
-      "websiteURL": "https://github.com/MARS-engineers/",
-      "email": "matej.mrkva@mars-engineers.cz",
+      "websiteURL": "https://github.com/MARS-Engineers/arduino-boards/",
       "platforms": [
         {
-          "name": "MARS-engineers boards",
+          "name": "MARS Engineers Robotrix Boards",
           "architecture": "robotrix",
           "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://github.com/MARS-engineers/arduino-boards/releases/download/test/MARS-engineers-boards-test.zip",
-          "archiveFileName": "MARS-engineers-boards-test.zip",
+          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/1.0.0/MARS-Engineers-boards-1.0.0.zip",
+          "archiveFileName": "MARS-Engineers-boards-1.0.0.zip",
           "checksum": "SHA-256:ac706af207c1fa67328c0fcd1e4b0e8ad8465f4797d386e5af98dd9a345bca8f",
           "size": "2234",
           "boards": [
@@ -21,9 +20,7 @@
             },
             {
               "name": "Robotrix Rover One V2"
-            }
-          ],
-          "toolsDependencies": [],
+            }          ],
           "dependencies": [
             {
               "name": "rp2040",
