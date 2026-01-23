@@ -1,2 +1,7 @@
+BUILD_FILE="./build/MARS-engineers-boards-test.zip"
 
-zip -r build/MARS-engineers-boards-test.zip hardware
+zip -rq $BUILD_FILE hardware
+
+SIZE=$(stat -c %s $BUILD_FILE)
+
+echo "Size: " $SIZE
