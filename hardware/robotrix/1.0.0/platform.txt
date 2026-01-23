@@ -1,6 +1,6 @@
 name=MARS Engineers boards
 version=1.0.0
-architecture=rp2040
+architecture=robotrix
 
 # Použijeme core z arduino-pico
 build.core=rp2040
