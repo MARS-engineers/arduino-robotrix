@@ -1,0 +1,35 @@
+{
+  "packages": [
+    {
+      "name": "MARS-Engineers",
+      "maintainer": "Matěj Mrkva",
+      "websiteURL": "https://mars.engineers.cz",
+      "platforms": [
+        {
+          "name": "MARS Engineers Robotrix Boards",
+          "architecture": "robotrix",
+          "version": "__VERSION__",
+          "category": "Contributed",
+          "url": "__URL__",
+          "archiveFileName": "__ZIP__",
+          "checksum": "SHA-256:__SHA256__",
+          "size": "__SIZE__",
+          "boards": [
+            {
+              "name": "Robotrix Rover One V0.1"
+            },
+            {
+              "name": "Robotrix Rover One V2"
+            }          ],
+          "dependencies": [
+            {
+              "name": "rp2040",
+              "version": ">=3.6.0",
+              "packager": "earlephilhower"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
