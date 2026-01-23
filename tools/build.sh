@@ -3,7 +3,7 @@ set -e
 
 VENDOR="MARS-Engineers"
 ARCH="robotrix"
-VERSION="1.0.2"
+VERSION="1.0.3"
 REPO_URL="https://github.com/MARS-Engineers/arduino-boards"
 JSON_OUT="package_MARS-engineers_boards_index.json"
 ZIP_NAME="${VENDOR}-boards-${VERSION}.zip"
