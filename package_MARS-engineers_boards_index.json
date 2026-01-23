@@ -8,11 +8,11 @@
         {
           "name": "MARS Engineers Robotrix Boards",
           "architecture": "robotrix",
-          "version": "1.0.9",
+          "version": "1.0.10",
           "category": "Contributed",
-          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.9.zip",
-          "archiveFileName": "MARS-Engineers-boards-1.0.9.zip",
-          "checksum": "SHA-256:fccadf69fd037eacb3983b022c7dec72d8edb4b6b0ce2c8bfc930275130e2a52",
+          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.10.zip",
+          "archiveFileName": "MARS-Engineers-boards-1.0.10.zip",
+          "checksum": "SHA-256:9c6a8e9dcbd9f47b37edaaa657e0d58758ee91839d4d24ef813150589db4d8b2",
           "size": "2250",
           "boards": [
             {
