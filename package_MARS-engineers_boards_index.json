@@ -8,12 +8,12 @@
         {
           "name": "MARS Engineers Robotrix Boards",
           "architecture": "robotrix",
-          "version": "1.0.1",
+          "version": "1.0.2",
           "category": "Contributed",
-          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.1.zip",
-          "archiveFileName": "MARS-Engineers-boards-1.0.1.zip",
-          "checksum": "SHA-256:78fecac8964d4192e02b6ff95d7545c5b9a8351460198a7366ae328a03a274c5",
-          "size": "2881",
+          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.2.zip",
+          "archiveFileName": "MARS-Engineers-boards-1.0.2.zip",
+          "checksum": "SHA-256:99c2fd6fd34547ac3e8aac262c33e6444aeb740d5cbb5d1ec26565acbbef3ff4",
+          "size": "2882",
           "boards": [
             {
               "name": "Robotrix Rover One V0.1"
