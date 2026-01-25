@@ -1,0 +1,221 @@
+menu.BoardModel=Model
+menu.variantchip=Chip Variant
+menu.flash=Flash Size
+menu.psramcs=PSRAM CS
+menu.psram=PSRAM Size
+menu.psramfreq=PSRAM Speed
+menu.freq=CPU Speed
+menu.arch=CPU Architecture
+menu.opt=Optimize
+menu.os=Operating System
+menu.dbgport=Debug Port
+menu.dbglvl=Debug Level
+menu.boot2=Boot Stage 2
+menu.wificountry=WiFi Region
+menu.espwifitype=ESP Wifi Type
+menu.uploadmethod=Upload Method
+
+
+# -----------------------------------
+# Robotix Rover One V0
+# -----------------------------------
+
+RoverOneV0.name=Robotrix Rover One v0
+RoverOneV0.vid.0=0x2e8a
+RoverOneV0.pid.0=0xf00a
+RoverOneV0.vid.1=0x2e8a
+RoverOneV0.pid.1=0xf10a
+RoverOneV0.upload_port.0.vid=0x2e8a
+RoverOneV0.upload_port.0.pid=0xf00a
+RoverOneV0.upload_port.1.vid=0x2e8a
+RoverOneV0.upload_port.1.pid=0xf10a
+RoverOneV0.build.usbvid=-DUSBD_VID=0x2e8a
+RoverOneV0.build.usbpid=-DUSBD_PID=0xf00a
+RoverOneV0.build.usbpwr=-DUSBD_MAX_POWER_MA=250
+RoverOneV0.build.board=ROBOTRIX_ROVER_ONE_V0
+RoverOneV0.build.mcu=cortex-m0plus
+RoverOneV0.build.chip=rp2040
+RoverOneV0.build.toolchain=arm-none-eabi
+RoverOneV0.build.toolchainpkg=pqt-gcc
+RoverOneV0.build.toolchainopts=-march=armv6-m -mcpu=cortex-m0plus -mthumb
+RoverOneV0.build.uf2family=--family rp2040
+RoverOneV0.build.variant=RoverOneV0
+RoverOneV0.upload.maximum_size=16777216
+RoverOneV0.upload.wait_for_upload_port=true
+RoverOneV0.upload.erase_cmd=
+RoverOneV0.serial.disableDTR=false
+RoverOneV0.serial.disableRTS=false
+RoverOneV0.build.f_cpu=125000000
+RoverOneV0.build.led=
+RoverOneV0.build.core=rp2040:rp2040
+RoverOneV0.build.ldscript=memmap_default.ld
+RoverOneV0.build.boot2=boot2_generic_03h_4_padded_checksum
+RoverOneV0.build.usb_manufacturer="RoverOneV0"
+RoverOneV0.build.usb_product="RP2040"
+RoverOneV0.ipbtstack.ipv4only=IPv4 Only
+RoverOneV0.ipbtstack.ipv4only.build.libpicow=liblwip.a
+RoverOneV0.ipbtstack.ipv4only.build.libpicowdefs=-DLWIP_IPV6=0 -DLWIP_IPV4=1
+RoverOneV0.usbstack.picosdk=Pico SDK
+RoverOneV0.usbstack.picosdk.build.usbstack_flags=
+RoverOneV0.boot2.boot2_w25q16jvxq_4_padded_checksum=W25Q16JVxQ QSPI /4
+RoverOneV0.boot2.boot2_w25q16jvxq_4_padded_checksum.build.boot2=boot2_w25q16jvxq_4_padded_checksum
+RoverOneV0.profile.Disabled=Disabled
+RoverOneV0.profile.Disabled.build.flags.profile=
+RoverOneV0.rtti.Disabled=Disabled
+RoverOneV0.rtti.Disabled.build.flags.rtti=-fno-rtti
+RoverOneV0.stackprotect.Disabled=Disabled
+RoverOneV0.stackprotect.Disabled.build.flags.stackprotect=
+RoverOneV0.exceptions.Disabled=Disabled
+RoverOneV0.exceptions.Disabled.build.flags.exceptions=-fno-exceptions
+RoverOneV0.exceptions.Disabled.build.flags.libstdcpp=-lstdc++
+
+RoverOneV0.menu.flash.16777216_0=16MB (no FS)
+RoverOneV0.menu.flash.16777216_0.upload.maximum_size=16773120
+RoverOneV0.menu.flash.16777216_0.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_0.build.flash_length=16773120
+RoverOneV0.menu.flash.16777216_0.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_0.build.fs_start=285208576
+RoverOneV0.menu.flash.16777216_0.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_15728640=16MB (Sketch: 1MB, FS: 15MB)
+RoverOneV0.menu.flash.16777216_15728640.upload.maximum_size=1044480
+RoverOneV0.menu.flash.16777216_15728640.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_15728640.build.flash_length=1044480
+RoverOneV0.menu.flash.16777216_15728640.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_15728640.build.fs_start=269479936
+RoverOneV0.menu.flash.16777216_15728640.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_14680064=16MB (Sketch: 2MB, FS: 14MB)
+RoverOneV0.menu.flash.16777216_14680064.upload.maximum_size=2093056
+RoverOneV0.menu.flash.16777216_14680064.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_14680064.build.flash_length=2093056
+RoverOneV0.menu.flash.16777216_14680064.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_14680064.build.fs_start=270528512
+RoverOneV0.menu.flash.16777216_14680064.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_12582912=16MB (Sketch: 4MB, FS: 12MB)
+RoverOneV0.menu.flash.16777216_12582912.upload.maximum_size=4190208
+RoverOneV0.menu.flash.16777216_12582912.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_12582912.build.flash_length=4190208
+RoverOneV0.menu.flash.16777216_12582912.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_12582912.build.fs_start=272625664
+RoverOneV0.menu.flash.16777216_12582912.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_8388608=16MB (Sketch: 8MB, FS: 8MB)
+RoverOneV0.menu.flash.16777216_8388608.upload.maximum_size=8384512
+RoverOneV0.menu.flash.16777216_8388608.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_8388608.build.flash_length=8384512
+RoverOneV0.menu.flash.16777216_8388608.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_8388608.build.fs_start=276819968
+RoverOneV0.menu.flash.16777216_8388608.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_4194304=16MB (Sketch: 12MB, FS: 4MB)
+RoverOneV0.menu.flash.16777216_4194304.upload.maximum_size=12578816
+RoverOneV0.menu.flash.16777216_4194304.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_4194304.build.flash_length=12578816
+RoverOneV0.menu.flash.16777216_4194304.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_4194304.build.fs_start=281014272
+RoverOneV0.menu.flash.16777216_4194304.build.fs_end=285208576
+RoverOneV0.menu.flash.16777216_2097152=16MB (Sketch: 14MB, FS: 2MB)
+RoverOneV0.menu.flash.16777216_2097152.upload.maximum_size=14675968
+RoverOneV0.menu.flash.16777216_2097152.build.flash_total=16777216
+RoverOneV0.menu.flash.16777216_2097152.build.flash_length=14675968
+RoverOneV0.menu.flash.16777216_2097152.build.eeprom_start=285208576
+RoverOneV0.menu.flash.16777216_2097152.build.fs_start=283111424
+RoverOneV0.menu.flash.16777216_2097152.build.fs_end=285208576
+
+RoverOneV0.menu.freq.200=200 MHz
+RoverOneV0.menu.freq.200.build.f_cpu=200000000L
+RoverOneV0.menu.freq.50=50 MHz
+RoverOneV0.menu.freq.50.build.f_cpu=50000000L
+RoverOneV0.menu.freq.100=100 MHz
+RoverOneV0.menu.freq.100.build.f_cpu=100000000L
+RoverOneV0.menu.freq.120=120 MHz
+RoverOneV0.menu.freq.120.build.f_cpu=120000000L
+RoverOneV0.menu.freq.125=125 MHz
+RoverOneV0.menu.freq.125.build.f_cpu=125000000L
+RoverOneV0.menu.freq.128=128 MHz
+RoverOneV0.menu.freq.128.build.f_cpu=128000000L
+RoverOneV0.menu.freq.133=133 MHz
+RoverOneV0.menu.freq.133.build.f_cpu=133000000L
+RoverOneV0.menu.freq.150=150 MHz
+RoverOneV0.menu.freq.150.build.f_cpu=150000000L
+RoverOneV0.menu.freq.176=176 MHz
+RoverOneV0.menu.freq.176.build.f_cpu=176000000L
+RoverOneV0.menu.freq.225=225 MHz (Overclock)
+RoverOneV0.menu.freq.225.build.f_cpu=225000000L
+RoverOneV0.menu.freq.240=240 MHz (Overclock)
+RoverOneV0.menu.freq.240.build.f_cpu=240000000L
+RoverOneV0.menu.freq.250=250 MHz (Overclock)
+RoverOneV0.menu.freq.250.build.f_cpu=250000000L
+RoverOneV0.menu.freq.276=276 MHz (Overclock)
+RoverOneV0.menu.freq.276.build.f_cpu=276000000L
+RoverOneV0.menu.freq.300=300 MHz (Overclock)
+RoverOneV0.menu.freq.300.build.f_cpu=300000000L
+
+RoverOneV0.menu.opt.Small=Small (-Os) (standard)
+RoverOneV0.menu.opt.Small.build.flags.optimize=-Os
+RoverOneV0.menu.opt.Optimize=Optimize (-O)
+RoverOneV0.menu.opt.Optimize.build.flags.optimize=-O
+RoverOneV0.menu.opt.Optimize2=Optimize More (-O2)
+RoverOneV0.menu.opt.Optimize2.build.flags.optimize=-O2
+RoverOneV0.menu.opt.Optimize3=Optimize Even More (-O3)
+RoverOneV0.menu.opt.Optimize3.build.flags.optimize=-O3
+RoverOneV0.menu.opt.Fast=Fast (-Ofast) (maybe slower)
+RoverOneV0.menu.opt.Fast.build.flags.optimize=-Ofast
+RoverOneV0.menu.opt.Debug=Debug (-Og)
+RoverOneV0.menu.opt.Debug.build.flags.optimize=-Og
+RoverOneV0.menu.opt.Disabled=Disabled (-O0)
+RoverOneV0.menu.opt.Disabled.build.flags.optimize=-O0
+
+RoverOneV0.menu.os.none=None
+RoverOneV0.menu.os.none.build.os=
+RoverOneV0.menu.os.freertos=FreeRTOS SMP
+RoverOneV0.menu.os.freertos.build.os=-D__FREERTOS
+
+RoverOneV0.menu.dbgport.Disabled=Disabled
+RoverOneV0.menu.dbgport.Disabled.build.debug_port=
+RoverOneV0.menu.dbgport.Serial=Serial
+RoverOneV0.menu.dbgport.Serial.build.debug_port=-DDEBUG_RP2040_PORT=Serial
+RoverOneV0.menu.dbgport.Serial1=Serial1
+RoverOneV0.menu.dbgport.Serial1.build.debug_port=-DDEBUG_RP2040_PORT=Serial1
+RoverOneV0.menu.dbgport.Serial2=Serial2
+RoverOneV0.menu.dbgport.Serial2.build.debug_port=-DDEBUG_RP2040_PORT=Serial2
+RoverOneV0.menu.dbgport.SerialSemi=SerialSemi
+RoverOneV0.menu.dbgport.SerialSemi.build.debug_port=-DDEBUG_RP2040_PORT=SerialSemi
+RoverOneV0.menu.dbglvl.None=None
+RoverOneV0.menu.dbglvl.None.build.debug_level=
+RoverOneV0.menu.dbglvl.Core=Core
+RoverOneV0.menu.dbglvl.Core.build.debug_level=-DDEBUG_RP2040_CORE
+RoverOneV0.menu.dbglvl.SPI=SPI
+RoverOneV0.menu.dbglvl.SPI.build.debug_level=-DDEBUG_RP2040_SPI
+RoverOneV0.menu.dbglvl.Wire=Wire
+RoverOneV0.menu.dbglvl.Wire.build.debug_level=-DDEBUG_RP2040_WIRE
+RoverOneV0.menu.dbglvl.Bluetooth=Bluetooth
+RoverOneV0.menu.dbglvl.Bluetooth.build.debug_level=-DDEBUG_RP2040_BLUETOOTH
+RoverOneV0.menu.dbglvl.LWIP=LWIP
+RoverOneV0.menu.dbglvl.LWIP.build.debug_level=-DLWIP_DEBUG=1
+RoverOneV0.menu.dbglvl.All=All
+RoverOneV0.menu.dbglvl.All.build.debug_level=-DDEBUG_RP2040_WIRE -DDEBUG_RP2040_SPI -DDEBUG_RP2040_CORE -DDEBUG_RP2040_BLUETOOTH -DLWIP_DEBUG=1
+RoverOneV0.menu.dbglvl.NDEBUG=NDEBUG
+RoverOneV0.menu.dbglvl.NDEBUG.build.debug_level=-DNDEBUG
+
+
+
+
+
+RoverOneV0.menu.uploadmethod.default=Default (UF2)
+RoverOneV0.menu.uploadmethod.default.build.ram_length=256k
+RoverOneV0.menu.uploadmethod.default.build.debugscript=picoprobe_cmsis_dap.tcl
+RoverOneV0.menu.uploadmethod.default.upload.maximum_data_size=262144
+RoverOneV0.menu.uploadmethod.default.upload.tool=uf2conv
+RoverOneV0.menu.uploadmethod.default.upload.tool.default=uf2conv
+RoverOneV0.menu.uploadmethod.default.upload.tool.network=uf2conv-network
+RoverOneV0.menu.uploadmethod.picotool=Picotool
+RoverOneV0.menu.uploadmethod.picotool.build.ram_length=256k
+RoverOneV0.menu.uploadmethod.picotool.build.debugscript=picoprobe.tcl
+RoverOneV0.menu.uploadmethod.picotool.build.picodebugflags=-DENABLE_PICOTOOL_USB
+RoverOneV0.menu.uploadmethod.picotool.upload.maximum_data_size=262144
+RoverOneV0.menu.uploadmethod.picotool.upload.tool=picotool
+RoverOneV0.menu.uploadmethod.picotool.upload.tool.default=picotool
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap=Picoprobe/Debugprobe (CMSIS-DAP)
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap.build.ram_length=256k
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap.build.debugscript=picoprobe_cmsis_dap.tcl
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap.upload.maximum_data_size=262144
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap.upload.tool=picoprobe_cmsis_dap
+RoverOneV0.menu.uploadmethod.picoprobe_cmsis_dap.upload.tool.default=picoprobe_cmsis_dap
