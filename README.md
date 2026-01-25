@@ -1,5 +1,5 @@
 # arduino-boards
-##Install
+## Install
 
 1. Install rp2040 core [https://github.com/earlephilhower/arduino-pico](https://github.com/earlephilhower/arduino-pico)
 
