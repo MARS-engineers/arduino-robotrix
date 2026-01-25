@@ -6,8 +6,7 @@ Open up the Arduino IDE and go to File->Preferences.
 In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
 
 https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json
-
-![image](https://user-images.githubusercontent.com/11875/111917251-3c57f400-8a3c-11eb-8120-810a8328ab3f.png)
+<img width="804" height="533" alt="image" src="https://github.com/user-attachments/assets/421b0eb6-c079-4c88-bd3a-cdc40132c1e2" />
 
 Hit OK to close the dialog.
 
