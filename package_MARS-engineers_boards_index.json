@@ -7,13 +7,13 @@
       "platforms": [
         {
           "name": "MARS Engineers Robotrix Boards",
-          "architecture": "robotrix",
-          "version": "1.0.10",
+          "architecture": "rp2040",
+          "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.10.zip",
-          "archiveFileName": "MARS-Engineers-boards-1.0.10.zip",
-          "checksum": "SHA-256:9c6a8e9dcbd9f47b37edaaa657e0d58758ee91839d4d24ef813150589db4d8b2",
-          "size": "2250",
+          "url": "https://github.com/MARS-Engineers/arduino-boards/releases/download/test/MARS-Engineers-boards-1.0.0.zip",
+          "archiveFileName": "MARS-Engineers-boards-1.0.0.zip",
+          "checksum": "SHA-256:1599a8887caad9d1597f0331e62c315629d872f6d52719ee9612657c8a7d85f9",
+          "size": "8175",
           "boards": [
             {
               "name": "Robotrix Rover One V0.1"
@@ -26,6 +26,43 @@
             {
               "name": "rp2040",
               "version": ">=3.9.0"
+            }
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-gcc"
+            },
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-gcc-riscv"
+            },
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-mklittlefs"
+            },
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-pioasm"
+            },
+            {
+              "packager": "rp2040",
+              "version": "1.0.1-base-3a57aed-1",
+              "name": "pqt-python3"
+            },
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-openocd"
+            },
+            {
+              "packager": "rp2040",
+              "version": "4.1.0-1aec55e",
+              "name": "pqt-picotool"
             }
           ]
         }
