@@ -19,5 +19,12 @@ Type "mars" in the search box and select "Add":
 
 
 
+## Attribution
 
+This project includes modified configuration files derived from the
+arduino-pico RP2040/RP2350 core by Earle F. Philhower, III.
 
+Original project:
+https://github.com/earlephilhower/arduino-pico
+
+All original code remains under the LGPL-2.1-or-later license.
