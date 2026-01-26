@@ -12,11 +12,12 @@ https://github.com/MARS-engineers/arduino-boards/releases/download/global/packag
 
 4. Go to Tools->Boards->Board Manager in the IDE
 
-5. Type "rp2040" in the search box and select "Add":
+5. Type "rp2040" in the search box and select "Install":
 
-6. Type "mars" in the search box and select "Add":
+6. Type "mars" in the search box and select "Install":
 
 <img width="264" height="160" alt="image" src="https://github.com/user-attachments/assets/1f8b9d9d-d21a-4c54-819a-fcf7b88d5d6c" />
+<img width="213" height="224" alt="image" src="https://github.com/user-attachments/assets/16580d84-5819-4feb-9dd6-0bba550894c9" />
 
 
 
