@@ -3,17 +3,16 @@ set -e
 
 VENDOR="MARS-Engineers"
 ARCH="robotrix"
-VERSION="1.0.3"
+VERSION="1.0.0"
 REPO_URL="https://github.com/MARS-Engineers/arduino-boards"
 JSON_OUT="package_MARS-engineers_boards_index.json"
 ZIP_NAME="${VENDOR}-boards-${VERSION}.zip"
-#RELEASE_URL="${REPO_URL}/releases/download/${VERSION}/${ZIP_NAME}"
-RELEASE_URL="${REPO_URL}/releases/download/test/${ZIP_NAME}"
+RELEASE_URL="${REPO_URL}/releases/download/${VERSION}/${ZIP_NAME}"
 ZIP_PATH="build/${ZIP_NAME}"
 rm -f "$ZIP_PATH"
 
 cd hardware
-zip -rq ../"$ZIP_PATH" robotrix
+zip -rq ../"$ZIP_PATH" rp2040
 cd ..
 
 SIZE=$(stat -c %s "$ZIP_PATH")
