@@ -1,4 +1,7 @@
 # arduino-boards
+
+## !! Curently works only on Linux!!
+
 ## Install
 
 1. Open up the Arduino IDE and go to File->Preferences.
