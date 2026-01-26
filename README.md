@@ -1,19 +1,20 @@
 # arduino-boards
+## Install
 
+1. Install rp2040 core [https://github.com/earlephilhower/arduino-pico](https://github.com/earlephilhower/arduino-pico)
 
-Open up the Arduino IDE and go to File->Preferences.
+2. Open up the Arduino IDE and go to File->Preferences.
 
-In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
+3. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
 
 https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json
+<img width="804" height="533" alt="image" src="https://github.com/user-attachments/assets/421b0eb6-c079-4c88-bd3a-cdc40132c1e2" />
 
-![image](https://user-images.githubusercontent.com/11875/111917251-3c57f400-8a3c-11eb-8120-810a8328ab3f.png)
+4. Hit OK to close the dialog.
 
-Hit OK to close the dialog.
+5. Go to Tools->Boards->Board Manager in the IDE
 
-Go to Tools->Boards->Board Manager in the IDE
-
-Type "mars" in the search box and select "Add":
+6. Type "mars" in the search box and select "Add":
 
 <img width="264" height="160" alt="image" src="https://github.com/user-attachments/assets/1f8b9d9d-d21a-4c54-819a-fcf7b88d5d6c" />
 
