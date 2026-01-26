@@ -1,7 +1,14 @@
 # arduino-boards
-## Install
+## Requirements
 
-1. Install rp2040 core [https://github.com/earlephilhower/arduino-pico](https://github.com/earlephilhower/arduino-pico)
+This platform requires the "Raspberry Pi Pico/RP2040" core by
+Earle F. Philhower, III.
+
+Install it first via Boards Manager:
+[https://github.com/earlephilhower/arduino-pico
+](https://github.com/earlephilhower/arduino-pico
+)
+## Install
 
 2. Open up the Arduino IDE and go to File->Preferences.
 
