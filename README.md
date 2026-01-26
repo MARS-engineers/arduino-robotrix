@@ -1,25 +1,18 @@
 # arduino-boards
-## Requirements
-
-This platform requires the "Raspberry Pi Pico/RP2040" core by
-Earle F. Philhower, III.
-
-Install it first via Boards Manager:
-[https://github.com/earlephilhower/arduino-pico
-](https://github.com/earlephilhower/arduino-pico
-)
 ## Install
 
-2. Open up the Arduino IDE and go to File->Preferences.
+1. Open up the Arduino IDE and go to File->Preferences.
 
-3. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
+2. In the dialog that pops up, enter the following URLs in the "Additional Boards Manager URLs" field:
 
-https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json
+https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json, https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 <img width="804" height="533" alt="image" src="https://github.com/user-attachments/assets/421b0eb6-c079-4c88-bd3a-cdc40132c1e2" />
 
-4. Hit OK to close the dialog.
+3. Hit OK to close the dialog.
 
-5. Go to Tools->Boards->Board Manager in the IDE
+4. Go to Tools->Boards->Board Manager in the IDE
+
+5. Type "rp2040" in the search box and select "Add":
 
 6. Type "mars" in the search box and select "Add":
 
