@@ -44,7 +44,7 @@ pluggable_discovery.required.0=builtin:serial-discovery
 pluggable_discovery.required.1=builtin:mdns-discovery
 pluggable_monitor.required.serial=builtin:serial-monitor
 
-
+recipe.hooks.prebuild.1.pattern=echo "Using Arduino CLI >= 1.0.4 is required for this platform"
 
 compiler.path={runtime.tools.{build.toolchainpkg}.path}/bin/
 
