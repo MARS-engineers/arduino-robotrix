@@ -7,7 +7,7 @@
 - RP2040 core by Earle Philhower
 
 ## Install
-1. Install RP2040 by Earle Philhower from [https://github.com/earlephilhower/arduino-pico](https://github.com/earlephilhower/arduino-pico)
+1. Install RP2040 by Earle Philhower from [https://github.com/earlephilhower/arduino-pico](https://github.com/earlephilhower/arduino-pico?tab=readme-ov-file#installation)
    
 3. Open up the Arduino IDE and go to File->Preferences.
 
