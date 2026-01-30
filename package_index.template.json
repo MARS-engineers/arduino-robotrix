@@ -2,7 +2,7 @@
   "packages": [
     {
       "name": "MARS-Engineers",
-      "maintainer": "Matěj Mrkva",
+      "maintainer": "Matej Mrkva",
       "websiteURL": "https://github.com/MARS-Engineers/arduino-boards",
       "platforms": [
         {
@@ -19,50 +19,13 @@
               "name": "Robotrix Rover One V0.1"
             },
             {
-              "name": "Robotrix Rover One V2"
+              "name": "Robotrix Rover One V1"
             }
           ],
           "dependencies": [
             {
               "name": "rp2040",
               "version": ">=3.9.0"
-            }
-          ],
-          "toolsDependencies": [
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-gcc"
-            },
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-gcc-riscv"
-            },
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-mklittlefs"
-            },
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-pioasm"
-            },
-            {
-              "packager": "rp2040",
-              "version": "1.0.1-base-3a57aed-1",
-              "name": "pqt-python3"
-            },
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-openocd"
-            },
-            {
-              "packager": "rp2040",
-              "version": "4.1.0-1aec55e",
-              "name": "pqt-picotool"
             }
           ]
         }
