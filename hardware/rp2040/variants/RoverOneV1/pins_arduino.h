@@ -4,6 +4,7 @@
 //    https://datasheets.raspberrypi.org/pico/pico-datasheet.pdf
 
 #define PICO_RP2350A __PICO_RP2350A
+#define RoverOne V1
 
 // Motors encoders
 #define PIN_MOT_4_EB (4u)
