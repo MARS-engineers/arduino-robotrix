@@ -3,6 +3,8 @@
 // Pin definitions taken from:
 //    https://datasheets.raspberrypi.org/pico/pico-datasheet.pdf
 
+#define RoverOne V0
+
 // LEDs
 #define PIN_LED        (25u)
 
