@@ -36,6 +36,9 @@
 // Serial
 #define PIN_SERIAL1_TX (28u)
 #define PIN_SERIAL1_RX (29u)
+// Serial2 will be same as Serial1 due to some errors
+#define PIN_SERIAL2_TX (28u)
+#define PIN_SERIAL2_RX (29u)
 
 // SPI
 #define PIN_SPI0_MISO  (32u)
@@ -50,6 +53,8 @@
 #define PIN_WIRE1_SDA  (26u)
 #define PIN_WIRE1_SCL  (27u)
 
+#define InputSensorWire &Wire1
+#define INPUT_SENSOR_ADDRESS 0x40
 
 
 

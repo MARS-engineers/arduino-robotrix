@@ -50,11 +50,15 @@
 #define PIN_SPI1_SS    (13u)
 
 // Wire
-#define PIN_WIRE0_SDA  (4u)
-#define PIN_WIRE0_SCL  (5u)
+#define PIN_WIRE0_SDA  (26u)
+#define PIN_WIRE0_SCL  (27u)
 
 #define PIN_WIRE1_SDA  (26u)
 #define PIN_WIRE1_SCL  (27u)
+
+#define InputSensorWire &Wire1
+#define INPUT_SENSOR_ADDRESS 0x40
+
 
 #define SERIAL_HOWMANY (3u)
 #define SPI_HOWMANY    (2u)
