@@ -14,6 +14,7 @@
 4. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
 
 https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json
+
 <img width="804" height="533" alt="image" src="https://github.com/user-attachments/assets/421b0eb6-c079-4c88-bd3a-cdc40132c1e2" />
 
 4. Hit OK to close the dialog.
@@ -23,8 +24,6 @@ https://github.com/MARS-engineers/arduino-boards/releases/download/global/packag
 6. Type "mars" in the search box and select "Install":
 
 <img width="264" height="160" alt="image" src="https://github.com/user-attachments/assets/1f8b9d9d-d21a-4c54-819a-fcf7b88d5d6c" />
-<img width="213" height="224" alt="image" src="https://github.com/user-attachments/assets/16580d84-5819-4feb-9dd6-0bba550894c9" />
-
 
 
 ## Attribution
