@@ -8,13 +8,18 @@ menu.freq=CPU Speed
 menu.arch=CPU Architecture
 menu.opt=Optimize
 menu.os=Operating System
+menu.profile=Profiling
+menu.rtti=RTTI
+menu.stackprotect=Stack Protector
+menu.exceptions=C++ Exceptions
 menu.dbgport=Debug Port
 menu.dbglvl=Debug Level
 menu.boot2=Boot Stage 2
 menu.wificountry=WiFi Region
+menu.usbstack=USB Stack
 menu.espwifitype=ESP Wifi Type
+menu.ipbtstack=IP/Bluetooth Stack
 menu.uploadmethod=Upload Method
-
 
 # -----------------------------------
 # Robotix Rover One V0
