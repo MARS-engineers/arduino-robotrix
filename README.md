@@ -25,6 +25,10 @@ https://github.com/MARS-engineers/arduino-boards/releases/download/global/packag
 
 <img width="264" height="160" alt="image" src="https://github.com/user-attachments/assets/1f8b9d9d-d21a-4c54-819a-fcf7b88d5d6c" />
 
+## This package add support for MARS-Engineers custom boards
+### Package includes
+- Robotrix Rover One v0.1 (first dev version)
+- Robotrix Rover One v1
 
 ## Attribution
 
