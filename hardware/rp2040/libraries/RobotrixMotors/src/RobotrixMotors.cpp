@@ -6,8 +6,6 @@ Motor::Motor(int pin_en, int pin_a, int pin_b) {
   _pin_b = pin_b;
 }
 
-#ifdef RoverOne
-
 void Motor::setup() {
   pinMode(_pin_en, OUTPUT);
   pinMode(_pin_a, OUTPUT);
@@ -31,4 +29,3 @@ void Motor::stop() {
   digitalWrite(_pin_a, LOW);
   digitalWrite(_pin_b, LOW);
 }
-#endif
