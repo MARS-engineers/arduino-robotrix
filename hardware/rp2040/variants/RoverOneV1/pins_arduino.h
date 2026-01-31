@@ -5,6 +5,8 @@
 
 #define PICO_RP2350A __PICO_RP2350A
 #define RoverOne(V1)
+#define HW_VERSION "0.1.0"
+
 
 // Motors encoders
 #define PIN_MOT_4_EB (4u)

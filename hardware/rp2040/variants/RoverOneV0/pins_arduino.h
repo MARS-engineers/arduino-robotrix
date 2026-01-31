@@ -4,6 +4,7 @@
 //    https://datasheets.raspberrypi.org/pico/pico-datasheet.pdf
 
 #define RoverOne V0
+#define HW_VERSION "0.0.5"
 
 // LEDs
 #define PIN_LED        (25u)
