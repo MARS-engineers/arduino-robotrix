@@ -4,7 +4,7 @@
 //    https://datasheets.raspberrypi.org/pico/pico-datasheet.pdf
 
 #define PICO_RP2350A __PICO_RP2350A
-#define RoverOne V1
+#define RoverOne(V1)
 
 // Motors encoders
 #define PIN_MOT_4_EB (4u)
@@ -37,8 +37,8 @@
 #define PIN_SERIAL1_TX (28u)
 #define PIN_SERIAL1_RX (29u)
 // Serial2 will be same as Serial1 due to some errors
-#define PIN_SERIAL2_TX (28u)
-#define PIN_SERIAL2_RX (29u)
+#define PIN_SERIAL2_TX (-1)
+#define PIN_SERIAL2_RX (-1)
 
 // SPI
 #define PIN_SPI0_MISO  (32u)
