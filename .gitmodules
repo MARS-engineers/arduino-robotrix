@@ -1,0 +1,3 @@
+[submodule "hardware/rp2040/libraries/RobotrixLeds/src/LiteLed"]
+	path = hardware/rp2040/libraries/RobotrixLeds/src/LiteLed
+	url = https://github.com/Xylopyrographer/LiteLED.git
