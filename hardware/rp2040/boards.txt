@@ -1,5 +1,4 @@
 menu.BoardModel=Model
-menu.variantchip=Chip Variant
 menu.flash=Flash Size
 menu.psramcs=PSRAM CS
 menu.psram=PSRAM Size
@@ -10,8 +9,6 @@ menu.opt=Optimize
 menu.os=Operating System
 menu.profile=Profiling
 menu.rtti=RTTI
-menu.stackprotect=Stack Protector
-menu.exceptions=C++ Exceptions
 menu.dbgport=Debug Port
 menu.dbglvl=Debug Level
 menu.boot2=Boot Stage 2
@@ -68,11 +65,9 @@ RoverOneV0.profile.Disabled=Disabled
 RoverOneV0.profile.Disabled.build.flags.profile=
 RoverOneV0.rtti.Disabled=Disabled
 RoverOneV0.rtti.Disabled.build.flags.rtti=-fno-rtti
-RoverOneV0.stackprotect.Disabled=Disabled
-RoverOneV0.stackprotect.Disabled.build.flags.stackprotect=
-RoverOneV0.exceptions.Disabled=Disabled
-RoverOneV0.exceptions.Disabled.build.flags.exceptions=-fno-exceptions
-RoverOneV0.exceptions.Disabled.build.flags.libstdcpp=-lstdc++
+RoverOneV0.build.flags.stackprotect=-fstack-protector-all
+RoverOneV0.build.flags.exceptions=-fno-exceptions
+RoverOneV0.build.flags.libstdcpp=-lstdc++
 
 RoverOneV0.menu.flash.16777216_0=16MB (no FS)
 RoverOneV0.menu.flash.16777216_0.upload.maximum_size=16773120
@@ -200,10 +195,6 @@ RoverOneV0.menu.dbglvl.All.build.debug_level=-DDEBUG_RP2040_WIRE -DDEBUG_RP2040_
 RoverOneV0.menu.dbglvl.NDEBUG=NDEBUG
 RoverOneV0.menu.dbglvl.NDEBUG.build.debug_level=-DNDEBUG
 
-
-
-
-
 RoverOneV0.menu.uploadmethod.default=Default (UF2)
 RoverOneV0.menu.uploadmethod.default.build.ram_length=256k
 RoverOneV0.menu.uploadmethod.default.build.debugscript=picoprobe_cmsis_dap.tcl
@@ -257,24 +248,15 @@ RoverOneV1.build.boot2=none
 RoverOneV1.build.usb_manufacturer="MARS-Engineers"
 RoverOneV1.build.usb_product="Robotix Rover One V2"
 
-RoverOneV1.menu.variantchip.RP2530B=RP2530B
-RoverOneV1.menu.variantchip.RP2530B.build.variantdefines=-D__PICO_RP2350A=0
-
+RoverOneV1.build.flags.exceptions=-fno-exceptions
+RoverOneV1.build.flags.libstdcpp=-lstdc++
+RoverOneV1.build.flags.stackprotect=-fstack-protector-all
+RoverOneV1.build.variantdefines=-D__PICO_RP2350A=0
 RoverOneV1.usbstack.picosdk.build.usbstack_flags=
 RoverOneV1.ipbtstack.ipv4only.build.libpicow=liblwip.a
 RoverOneV1.ipbtstack.ipv4only.build.libpicowdefs=-DLWIP_IPV6=0 -DLWIP_IPV4=1
 RoverOneV1.rtti.Disabled.build.flags.rtti=-fno-rtti
-RoverOneV1.menu.stackprotect.Disabled=Disabled
-RoverOneV1.menu.stackprotect.Disabled.build.flags.stackprotect=
-RoverOneV1.menu.stackprotect.Enabled=Enabled
-RoverOneV1.menu.stackprotect.Enabled.build.flags.stackprotect=-fstack-protector-all
 
-RoverOneV1.menu.exceptions.Disabled=Disabled
-RoverOneV1.menu.exceptions.Disabled.build.flags.exceptions=-fno-exceptions
-RoverOneV1.menu.exceptions.Disabled.build.flags.libstdcpp=-lstdc++
-RoverOneV1.menu.exceptions.Enabled=Enabled
-RoverOneV1.menu.exceptions.Enabled.build.flags.exceptions=-fexceptions
-RoverOneV1.menu.exceptions.Enabled.build.flags.libstdcpp=-lstdc++-exc
 
 RoverOneV1.menu.flash.16777216_0=16MB (no FS)
 RoverOneV1.menu.flash.16777216_0.upload.maximum_size=16769024
@@ -283,27 +265,6 @@ RoverOneV1.menu.flash.16777216_0.build.flash_length=16769024
 RoverOneV1.menu.flash.16777216_0.build.eeprom_start=285204480
 RoverOneV1.menu.flash.16777216_0.build.fs_start=285204480
 RoverOneV1.menu.flash.16777216_0.build.fs_end=285204480
-RoverOneV1.menu.flash.16777216_15728640=16MB (Sketch: 1MB, FS: 15MB)
-RoverOneV1.menu.flash.16777216_15728640.upload.maximum_size=1040384
-RoverOneV1.menu.flash.16777216_15728640.build.flash_total=16777216
-RoverOneV1.menu.flash.16777216_15728640.build.flash_length=1040384
-RoverOneV1.menu.flash.16777216_15728640.build.eeprom_start=285204480
-RoverOneV1.menu.flash.16777216_15728640.build.fs_start=269475840
-RoverOneV1.menu.flash.16777216_15728640.build.fs_end=285204480
-RoverOneV1.menu.flash.16777216_14680064=16MB (Sketch: 2MB, FS: 14MB)
-RoverOneV1.menu.flash.16777216_14680064.upload.maximum_size=2088960
-RoverOneV1.menu.flash.16777216_14680064.build.flash_total=16777216
-RoverOneV1.menu.flash.16777216_14680064.build.flash_length=2088960
-RoverOneV1.menu.flash.16777216_14680064.build.eeprom_start=285204480
-RoverOneV1.menu.flash.16777216_14680064.build.fs_start=270524416
-RoverOneV1.menu.flash.16777216_14680064.build.fs_end=285204480
-RoverOneV1.menu.flash.16777216_12582912=16MB (Sketch: 4MB, FS: 12MB)
-RoverOneV1.menu.flash.16777216_12582912.upload.maximum_size=4186112
-RoverOneV1.menu.flash.16777216_12582912.build.flash_total=16777216
-RoverOneV1.menu.flash.16777216_12582912.build.flash_length=4186112
-RoverOneV1.menu.flash.16777216_12582912.build.eeprom_start=285204480
-RoverOneV1.menu.flash.16777216_12582912.build.fs_start=272621568
-RoverOneV1.menu.flash.16777216_12582912.build.fs_end=285204480
 RoverOneV1.menu.flash.16777216_8388608=16MB (Sketch: 8MB, FS: 8MB)
 RoverOneV1.menu.flash.16777216_8388608.upload.maximum_size=8380416
 RoverOneV1.menu.flash.16777216_8388608.build.flash_total=16777216
@@ -325,6 +286,7 @@ RoverOneV1.menu.flash.16777216_2097152.build.flash_length=14671872
 RoverOneV1.menu.flash.16777216_2097152.build.eeprom_start=285204480
 RoverOneV1.menu.flash.16777216_2097152.build.fs_start=283107328
 RoverOneV1.menu.flash.16777216_2097152.build.fs_end=285204480
+
 RoverOneV1.menu.arch.arm=ARM
 RoverOneV1.menu.arch.arm.build.chip=rp2350
 RoverOneV1.menu.arch.arm.build.toolchain=arm-none-eabi
@@ -339,6 +301,7 @@ RoverOneV1.menu.arch.riscv.build.toolchainpkg=pqt-gcc-riscv
 RoverOneV1.menu.arch.riscv.build.toolchainopts=-march=rv32imac_zicsr_zifencei_zba_zbb_zbs_zbkb -mabi=ilp32
 RoverOneV1.menu.arch.riscv.build.uf2family=--family rp2350-riscv --abs-block
 RoverOneV1.menu.arch.riscv.build.mcu=rv32imac
+
 RoverOneV1.menu.freq.150=150 MHz
 RoverOneV1.menu.freq.150.build.f_cpu=150000000L
 RoverOneV1.menu.freq.50=50 MHz
@@ -384,6 +347,7 @@ RoverOneV1.menu.psramfreq.freq109=109 MHz
 RoverOneV1.menu.psramfreq.freq109.build.psram_freq=-DRP2350_PSRAM_MAX_SCK_HZ=109000000
 RoverOneV1.menu.psramfreq.freq133=133 MHz
 RoverOneV1.menu.psramfreq.freq133.build.psram_freq=-DRP2350_PSRAM_MAX_SCK_HZ=133000000
+
 RoverOneV1.menu.opt.Small=Small (-Os) (standard)
 RoverOneV1.menu.opt.Small.build.flags.optimize=-Os
 RoverOneV1.menu.opt.Optimize=Optimize (-O)
@@ -402,6 +366,7 @@ RoverOneV1.menu.os.none=None
 RoverOneV1.menu.os.none.build.os=
 RoverOneV1.menu.os.freertos=FreeRTOS SMP
 RoverOneV1.menu.os.freertos.build.os=-D__FREERTOS
+
 RoverOneV1.menu.profile.Disabled=Disabled
 RoverOneV1.menu.profile.Disabled.build.flags.profile=
 RoverOneV1.menu.profile.Enabled=Enabled
@@ -409,7 +374,7 @@ RoverOneV1.menu.profile.Enabled.build.flags.profile=-pg -D__PROFILE
 
 RoverOneV1.menu.dbgport.Disabled=Disabled
 RoverOneV1.menu.dbgport.Disabled.build.debug_port=
-RoverOneV1.menu.dbgport.Serial=Serial
+RoverOneV1.menu.dbgport.Serial=SerialUSB
 RoverOneV1.menu.dbgport.Serial.build.debug_port=-DDEBUG_RP2040_PORT=Serial
 RoverOneV1.menu.dbgport.Serial1=Serial1
 RoverOneV1.menu.dbgport.Serial1.build.debug_port=-DDEBUG_RP2040_PORT=Serial1
