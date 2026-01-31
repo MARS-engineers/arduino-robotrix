@@ -59,6 +59,7 @@
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 
+#define PIN_RGB_LEDS (-1)
 
 #define SERIAL_HOWMANY (3u)
 #define SPI_HOWMANY    (2u)
