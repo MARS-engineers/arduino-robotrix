@@ -56,6 +56,7 @@
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 
+#define CommandWire &Wire1
 
 
 #define PIN_RADIO_CE (31)
