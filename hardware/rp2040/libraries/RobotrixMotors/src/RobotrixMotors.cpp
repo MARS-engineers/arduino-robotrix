@@ -13,7 +13,7 @@ void Motor::setup() {
 }
 
 void Motor::SetSpeed(int8_t s) {
-  byte speed = map(abs(s), 0, 127, 0, 255);
+  byte speed = map(abs(s), 0, 127, 0, _max_speed);
   bool d = s < 0;
   // DEBUG_DEBUG("Set speed: %d, input %d", speed, s);
   analogWrite(_pin_en, speed);
@@ -28,4 +28,8 @@ void Motor::stopSlow() {
 void Motor::stop() {
   digitalWrite(_pin_a, LOW);
   digitalWrite(_pin_b, LOW);
+}
+
+void Motor::setMaxSpeed(uint8_t s){
+  _max_speed = s;
 }
