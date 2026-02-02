@@ -7,7 +7,6 @@
 #define RoverOne(V1)
 #define HW_VERSION "0.1.0"
 
-
 // Motors encoders
 #define PIN_MOT_4_EB (4u)
 #define PIN_MOT_4_EA (5u)
@@ -33,7 +32,7 @@
 #define PIN_MOT_STBY (24u)
 
 // LED
-#define PIN_LED        (25u)
+#define PIN_LED (25u)
 
 // Serial
 #define PIN_SERIAL1_TX (28u)
@@ -42,24 +41,38 @@
 #define PIN_SERIAL2_TX (-1)
 #define PIN_SERIAL2_RX (-1)
 
+
+// Sonars
+#define PIN_SONAR_IRQ (30u)
+#define SONAR_ADDRESS 0x20
+enum SonarDirections : uint8_t { // Directions of sonars, channel
+  Front = 0,
+  Front_L = 1,
+  Front_R = 2,
+  Left = 3,
+  Right = 4,
+  Back = 5,
+  Aux_A = 6,
+  Aux_B = 7
+};
+
 // SPI
-#define PIN_SPI0_MISO  (32u)
-#define PIN_SPI0_MOSI  (35u)
-#define PIN_SPI0_SCK   (34u)
-#define PIN_SPI0_SS    (17u)
+#define PIN_SPI0_MISO (32u)
+#define PIN_SPI0_MOSI (35u)
+#define PIN_SPI0_SCK (34u)
+#define PIN_SPI0_SS (17u)
 
 // Wire
-#define PIN_WIRE0_SDA  (36u)
-#define PIN_WIRE0_SCL  (37u)
+#define PIN_WIRE0_SDA (36u)
+#define PIN_WIRE0_SCL (37u)
 
-#define PIN_WIRE1_SDA  (26u)
-#define PIN_WIRE1_SCL  (27u)
+#define PIN_WIRE1_SDA (26u)
+#define PIN_WIRE1_SCL (27u)
 
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 
 #define CommandWire &Wire1
-
 
 #define PIN_RADIO_CE (31)
 #define PIN_RADIO_CSN (33)
@@ -67,9 +80,8 @@
 
 #define PIN_RGB_LEDS (38)
 
-
 #define SERIAL_HOWMANY (2u)
-#define SPI_HOWMANY    (1u)
-#define WIRE_HOWMANY   (2u)
+#define SPI_HOWMANY (1u)
+#define WIRE_HOWMANY (2u)
 
 #include "../common.h"
