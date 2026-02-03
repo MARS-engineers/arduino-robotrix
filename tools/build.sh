@@ -2,7 +2,7 @@
 set -e
 
 VENDOR="MARS-Engineers"
-VERSION="1.1.1"
+VERSION=$(cat ./tools/version)
 REPO_URL="https://github.com/MARS-Engineers/arduino-boards"
 
 JSON_OUT="build/ package_MARS-engineers_boards_index.json "
@@ -12,6 +12,10 @@ new_json="build/package_MARS-engineers_index-${VERSION}.json"
 ZIP_NAME="${VENDOR}-boards-${VERSION}.zip"
 RELEASE_URL="${REPO_URL}/releases/download/${VERSION}/${ZIP_NAME}"
 ZIP_PATH="build/${ZIP_NAME}"
+
+TEMP_PATH="build/temp"
+
+mkdir -p $TEMP_PATH
 rm -f "$ZIP_PATH"
 
 cd hardware
@@ -59,4 +63,4 @@ curl -L -o $old_json "https://github.com/MARS-engineers/arduino-boards/releases/
 
 python3 tools/merge_packages.py $new_json $old_json > $JSON_OUT
 
-rm -rf build/temp/*
+rm -rf $TEMP_PATH
