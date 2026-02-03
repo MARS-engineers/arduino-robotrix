@@ -17,8 +17,7 @@ public:
   void enable();
   void disable();
   void setMinMaxRange(uint8_t min, uint8_t max);
-  void regitsterCallbackIRQ(
-      IRQEvent Event); // Call Event when sonar echo is triggered
+  void regitsterCallbackIRQ(IRQEvent Event); // Call Event when sonar echo is triggered
   void doSonar();
   uint8_t readSonar(SonarDirections d);
 };
