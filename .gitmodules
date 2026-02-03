@@ -1,6 +1,6 @@
+[submodule "hardware/rp2040/libraries/RobotrixRadio/src/NRFLite"]
+	path = hardware/rp2040/libraries/RobotrixRadio/src/NRFLite
+	url = https://github.com/dparson55/NRFLite.git
 [submodule "hardware/rp2040/libraries/RobotrixLeds/src/LiteLed"]
 	path = hardware/rp2040/libraries/RobotrixLeds/src/LiteLed
 	url = https://github.com/Xylopyrographer/LiteLED.git
-[submodule "hardware/rp2040/libraries/RobotrixSonars/src/OctoSonar"]
-	path = hardware/rp2040/libraries/RobotrixSonars/src/OctoSonar
-	url = https://github.com/arielnh56/OctoSonar.git
