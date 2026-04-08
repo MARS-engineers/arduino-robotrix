@@ -2,7 +2,15 @@
 
 #include <Arduino.h>
 
-class CarClass {
+#ifndef RoverOne
+#error "This code is intended to run on MARS-Engineers Robotrix Rover board and compilled using https://github.com/MARS-engineers/arduino-boards/ pacakge"
+#endif
+
+
+
+
+
+class RoverClass {
 private:
 public:
   enum Direction : uint8_t {
@@ -30,4 +38,4 @@ public:
   void MotorRun(uint8_t motor, int8_t speed);
 };
 
-extern CarClass Car;
+extern RoverClass Rover;

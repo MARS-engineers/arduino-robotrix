@@ -1,4 +1,4 @@
-#include "./RobotrixCar.h"
+#include "./RobotrixRover.h"
 
 #include <RobotrixMotors.h>
 
@@ -7,7 +7,8 @@ Motor motorFR(PIN_MOT_3_E, PIN_MOT_3_A, PIN_MOT_3_B);
 Motor motorRL(PIN_MOT_2_E, PIN_MOT_2_A, PIN_MOT_2_B);
 Motor motorRR(PIN_MOT_4_E, PIN_MOT_4_A, PIN_MOT_4_B);
 
-void CarClass::setupMotors() {
+void RoverClass::setupMotors() {
+  pinMode(PIN_MOT_STBY, OUTPUT);
   // Setup all motors
   motorFL.setup();
   motorFR.setup();
@@ -15,14 +16,14 @@ void CarClass::setupMotors() {
   motorRR.setup();
 }
 
-void CarClass::stop() {
+void RoverClass::stop() {
   motorFL.SetSpeed(0);
   motorFR.SetSpeed(0);
   motorRL.SetSpeed(0);
   motorRR.SetSpeed(0);
 }
 
-void CarClass::MotorRun(uint8_t motor, int8_t speed) {
+void RoverClass::MotorRun(uint8_t motor, int8_t speed) {
   switch (motor) {
   case 1:
     motorFL.SetSpeed(speed);
@@ -39,10 +40,10 @@ void CarClass::MotorRun(uint8_t motor, int8_t speed) {
   }
 }
 
-void CarClass::motorsEnable() { digitalWrite(PIN_MOT_STBY, LOW); }
-void CarClass::motorsDisable() { digitalWrite(PIN_MOT_STBY, HIGH); }
+void RoverClass::motorsEnable() { digitalWrite(PIN_MOT_STBY, HIGH); }
+void RoverClass::motorsDisable() { digitalWrite(PIN_MOT_STBY, LOW); }
 
-void CarClass::moveXYR(uint8_t x, uint8_t y, uint8_t r) {
+void RoverClass::moveXYR(uint8_t x, uint8_t y, uint8_t r) {
   // 1. Compute raw wheel speeds
   int16_t fl = y + x + r;
   int16_t fr = y - x - r;
@@ -67,21 +68,21 @@ void CarClass::moveXYR(uint8_t x, uint8_t y, uint8_t r) {
   motorRR.SetSpeed((int8_t)rr);
 }
 
-void CarClass::move(Direction dir, uint8_t speed) {
+void RoverClass::move(Direction dir, uint8_t speed) {
   int8_t s = map(speed, 0, 100, 0, 100);
 
   switch (dir) {
   case FORWARD:
-    moveXYR(0, s, 0);
+    moveXYR(s, 0, 0);
     break;
   case BACKWARD:
-    moveXYR(0, -s, 0);
-    break;
-  case SLIDE_LEFT:
     moveXYR(-s, 0, 0);
     break;
+  case SLIDE_LEFT:
+    moveXYR(0, -s, 0);
+    break;
   case SLIDE_RIGHT:
-    moveXYR(s, 0, 0);
+    moveXYR(0, s, 0);
     break;
   case ROTATE_LEFT:
     moveXYR(0, 0, -s);
@@ -101,4 +102,4 @@ void CarClass::move(Direction dir, uint8_t speed) {
   }
 }
 
-CarClass Car;
+RoverClass Rover;
