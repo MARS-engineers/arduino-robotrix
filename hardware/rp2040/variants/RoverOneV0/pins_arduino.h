@@ -36,8 +36,9 @@
 #define PIN_SERIAL1_TX (0u)
 #define PIN_SERIAL1_RX (1u)
 
-#define PIN_SERIAL2_TX (8u)
-#define PIN_SERIAL2_RX (9u)
+//SERIAL2 WILL NOT WORK! it uses uart0, same as SERIAL1
+#define PIN_SERIAL2_TX (28u)
+#define PIN_SERIAL2_RX (29u)
 
 // SPI
 #define PIN_SPI0_MISO  (16u)
