@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include <cstdint>
 
 #ifndef RoverOne
 #error "This code is intended to run on MARS-Engineers Robotrix Rover board and compilled using https://github.com/MARS-engineers/arduino-boards/ pacakge"
@@ -32,10 +33,12 @@ public:
   void stop(void);
   void stopSlow(void);
   void move(Direction dir, uint8_t speed);
-  void moveXYR(uint8_t x, uint8_t y, uint8_t r);
+  void moveXYR(int8_t x, int8_t y, int8_t r);
   void motorsEnable();
   void motorsDisable();
   void MotorRun(uint8_t motor, int8_t speed);
+  void setMaxSpeed(uint8_t speed);
+  uint8_t maxSpeedValue = 127;
 };
 
 extern RoverClass Rover;
