@@ -15,7 +15,7 @@ void Motor::setup() {
 void Motor::SetSpeed(int8_t s) {
   byte speed = map(abs(s), 0, 127, 0, _max_speed);
   bool d = s < 0;
-  // DEBUG_DEBUG("Set speed: %d, input %d", speed, s);
+  //Serial.printf("Set speed: %d, input %d\n", speed, s);
   analogWrite(_pin_en, speed);
   digitalWrite(_pin_a, d);
   digitalWrite(_pin_b, !d);
