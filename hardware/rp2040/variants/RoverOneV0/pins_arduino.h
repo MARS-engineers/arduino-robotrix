@@ -37,19 +37,14 @@
 #define PIN_SERIAL1_RX (1u)
 
 //SERIAL2 WILL NOT WORK! it uses uart0, same as SERIAL1
-#define PIN_SERIAL2_TX (28u)
-#define PIN_SERIAL2_RX (29u)
+#define PIN_SERIAL2_TX (-1)
+#define PIN_SERIAL2_RX (-1)
 
 // SPI
-#define PIN_SPI0_MISO  (16u)
-#define PIN_SPI0_MOSI  (19u)
-#define PIN_SPI0_SCK   (18u)
-#define PIN_SPI0_SS    (17u)
-
-#define PIN_SPI1_MISO  (12u)
-#define PIN_SPI1_MOSI  (15u)
-#define PIN_SPI1_SCK   (14u)
-#define PIN_SPI1_SS    (13u)
+#define PIN_SPI0_MISO  (-1)
+#define PIN_SPI0_MOSI  (-1)
+#define PIN_SPI0_SCK   (-1)
+#define PIN_SPI0_SS    (-1)
 
 // Wire
 #define PIN_WIRE0_SDA  (26u)
@@ -61,11 +56,12 @@
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 #define CommandWire &Wire1
+#define CRFSUart &Serial1
 
 #define PIN_RGB_LEDS (-1)
 
-#define SERIAL_HOWMANY (3u)
-#define SPI_HOWMANY    (2u)
-#define WIRE_HOWMANY   (2u)
+#define SERIAL_HOWMANY (2u)
+#define SPI_HOWMANY    (0u)
+#define WIRE_HOWMANY   (1u)
 
 #include "../common.h"
