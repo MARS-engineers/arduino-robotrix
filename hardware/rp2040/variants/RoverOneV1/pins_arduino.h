@@ -34,12 +34,13 @@
 // LED
 #define PIN_LED (25u)
 
-// Serial
+// Serial1
 #define PIN_SERIAL1_TX (28u)
 #define PIN_SERIAL1_RX (29u)
-// Serial2 will be same as Serial1 due to some errors
-#define PIN_SERIAL2_TX (-1)
-#define PIN_SERIAL2_RX (-1)
+
+// Serial2
+#define PIN_SERIAL2_TX (44u)
+#define PIN_SERIAL2_RX (45u)
 
 
 // Sonars
@@ -73,6 +74,7 @@ enum SonarDirections : uint8_t { // Directions of sonars, channel
 #define INPUT_SENSOR_ADDRESS 0x40
 
 #define CommandWire &Wire1
+#define CRFSUart &Serial2
 
 #define PIN_RADIO_CE (31)
 #define PIN_RADIO_CSN (33)
