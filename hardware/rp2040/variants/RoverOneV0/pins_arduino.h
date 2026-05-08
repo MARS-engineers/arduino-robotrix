@@ -58,6 +58,11 @@
 #define CommandWire Wire1
 #define CRFSUart &Serial1
 
+// Radio
+#define PIN_RADIO_CE (-1)
+#define PIN_RADIO_CSN (-1)
+#define PIN_RADIO_IRQ (-1)
+
 #define PIN_RGB_LEDS (-1)
 
 #define SERIAL_HOWMANY (2u)
