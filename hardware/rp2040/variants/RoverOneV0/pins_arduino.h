@@ -47,15 +47,15 @@
 #define PIN_SPI0_SS    (-1)
 
 // Wire
-#define PIN_WIRE0_SDA  (26u)
-#define PIN_WIRE0_SCL  (27u)
+#define PIN_WIRE0_SDA  (-1)
+#define PIN_WIRE0_SCL  (-1)
 
 #define PIN_WIRE1_SDA  (26u)
 #define PIN_WIRE1_SCL  (27u)
 
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
-#define CommandWire &Wire1
+#define CommandWire Wire1
 #define CRFSUart &Serial1
 
 #define PIN_RGB_LEDS (-1)
