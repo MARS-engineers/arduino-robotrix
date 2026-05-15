@@ -40,7 +40,7 @@ sed \
 
 
 # Get previous release name
-#curl --silent https://api.github.com/repos/MARS-engineers/arduino-boards/releases > build/temp/releases.json
+#curl --silent https://api.github.com/repos/MARS-engineers/arduino-robotrix/releases > build/temp/releases.json
 # Previous final release (prerelease == false)
 #prev_release=$(jq -r '. | map(select(.draft == false and .prerelease == false)) | sort_by(.created_at | - fromdateiso8601) | .[0].tag_name' build/temp/releases.json)
 # Previous release (possibly a pre-release)
@@ -57,7 +57,7 @@ sed \
 
 # Download previous release
 #echo "Downloading base package: $base_ver"
-#curl -L -o $old_json "https://github.com/MARS-engineers/arduino-boards/releases/download/${base_ver}/package_MARS-engineers_index-${base_ver}.json"
+#curl -L -o $old_json "https://github.com/MARS-engineers/arduino-robotrix/releases/download/${base_ver}/package_MARS-engineers_index-${base_ver}.json"
 curl -L -o $old_json "https://github.com/MARS-engineers/arduino-robotrix/releases/download/global/package_MARS-engineers_boards_index.json"
 
 
