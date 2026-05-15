@@ -1,4 +1,4 @@
-# arduino-boards
+# arduino-Robotrix
 
 ### Requirements
 
@@ -13,7 +13,7 @@
 
 4. In the dialog that pops up, enter the following URL in the "Additional Boards Manager URLs" field:
 
-https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json
+https://github.com/MARS-engineers/arduino-robotrix/releases/download/global/package_MARS-engineers_boards_index.json
 
 <img width="804" height="533" alt="image" src="https://github.com/user-attachments/assets/421b0eb6-c079-4c88-bd3a-cdc40132c1e2" />
 
