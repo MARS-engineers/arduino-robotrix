@@ -1,3 +1,45 @@
 {
-    
+  "name": "MARS-Engineers",
+  "title": "Robotrix",
+  "description": "",
+  "homepage": "https://github.com/MARS-Engineers/arduino-robotrix",
+  "license": "",
+  "keywords": ["keyword_1", "keyword_N"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MARS-engineers/arduino-robotrix.git"
+  },
+  "version": "0.0.0",
+  "frameworks": {
+    "%FRAMEWORK_NAME_1%": {
+      "package": "framework-%FRAMEWORK_NAME_1%",
+      "script": "builder/frameworks/%FRAMEWORK_NAME_1%.py"
+    },
+    "%FRAMEWORK_NAME_N%": {
+      "package": "framework-%FRAMEWORK_NAME_N%",
+      "script": "builder/frameworks/%FRAMEWORK_NAME_N%.py"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "owner": "platformio",
+      "version": ">=1.40803.0,<1.40805.0"
+    },
+    "framework-%FRAMEWORK_NAME_1%": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.10607.0"
+    },
+    "framework-%FRAMEWORK_NAME_N%": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.117.0"
+    },
+    "tool-direct-vcs-url": {
+      "type": "uploader",
+      "optional": true,
+      "version": "https://github.com/user/repo.git"
+    }
+  }
 }
