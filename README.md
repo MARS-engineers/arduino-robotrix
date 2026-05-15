@@ -1,4 +1,6 @@
-# arduino-Robotrix
+# arduino-robotrix
+
+Arduino IDE package for MARS-Engineers Robotrix boards
 
 ### Requirements
 
