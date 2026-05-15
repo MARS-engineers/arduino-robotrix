@@ -3,7 +3,7 @@ set -e
 
 VENDOR="MARS-Engineers"
 VERSION=$(cat ./tools/version)
-REPO_URL="https://github.com/MARS-Engineers/arduino-boards"
+REPO_URL="https://github.com/MARS-Engineers/arduino-robotrix"
 
 JSON_OUT="build/ package_MARS-engineers_boards_index.json "
 old_json="build/temp/package_MARS-engineers_index_stable.json"
@@ -58,7 +58,7 @@ sed \
 # Download previous release
 #echo "Downloading base package: $base_ver"
 #curl -L -o $old_json "https://github.com/MARS-engineers/arduino-boards/releases/download/${base_ver}/package_MARS-engineers_index-${base_ver}.json"
-curl -L -o $old_json "https://github.com/MARS-engineers/arduino-boards/releases/download/global/package_MARS-engineers_boards_index.json"
+curl -L -o $old_json "https://github.com/MARS-engineers/arduino-robotrix/releases/download/global/package_MARS-engineers_boards_index.json"
 
 
 python3 tools/merge_packages.py $new_json $old_json > $JSON_OUT

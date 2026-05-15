@@ -3,7 +3,7 @@
     {
       "name": "MARS-Engineers",
       "maintainer": "Matej Mrkva",
-      "websiteURL": "https://github.com/MARS-Engineers/arduino-boards",
+      "websiteURL": "https://github.com/MARS-Engineers/arduino-robotrix",
       "platforms": [
         {
           "name": "MARS Engineers Robotrix Boards",
