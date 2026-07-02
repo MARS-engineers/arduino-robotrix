@@ -56,7 +56,7 @@
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 #define CommandWire Wire1
-#define CRFSUart &Serial1
+#define CRFSUart &Serial1   // CRFS is connected to debug port. !disconnect RS232 chip. (lift up the pins)
 
 // Radio
 #define PIN_RADIO_CE (-1)
