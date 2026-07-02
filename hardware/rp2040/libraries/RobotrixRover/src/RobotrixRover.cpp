@@ -9,7 +9,7 @@ Motor motorRL(PIN_MOT_1_E, PIN_MOT_1_A, PIN_MOT_1_B);
 Motor motorRR(PIN_MOT_4_E, PIN_MOT_4_A, PIN_MOT_4_B);
 
 void RoverClass::setupMotors() {
-  pinMode(PIN_MOT_STBY, OUTPUT);
+  pinMode(_pin_stby, OUTPUT);
   // Setup all motors
   motorFL.setup();
   motorFR.setup();
@@ -18,48 +18,49 @@ void RoverClass::setupMotors() {
 }
 
 void RoverClass::stop() {
-  motorFL.SetSpeed(0);
-  motorFR.SetSpeed(0);
-  motorRL.SetSpeed(0);
-  motorRR.SetSpeed(0);
+  motorFL.setSpeed(0);
+  motorFR.setSpeed(0);
+  motorRL.setSpeed(0);
+  motorRR.setSpeed(0);
 }
 void RoverClass::setMaxSpeed(uint8_t speed) {
+  maxSpeedValue = speed;
   motorFL.setMaxSpeed(speed);
   motorFR.setMaxSpeed(speed);
   motorRL.setMaxSpeed(speed);
   motorRR.setMaxSpeed(speed);
 }
-void RoverClass::MotorRun(uint8_t motor, int8_t speed) {
+void RoverClass::motorRun(uint8_t motor, int8_t speed) {
   switch (motor) {
   case 1:
-    motorFL.SetSpeed(speed);
+    motorFL.setSpeed(speed);
     break;
   case 2:
-    motorFR.SetSpeed(speed);
+    motorFR.setSpeed(speed);
     break;
   case 3:
-    motorRL.SetSpeed(speed);
+    motorRL.setSpeed(speed);
     break;
   case 4:
-    motorRR.SetSpeed(speed);
+    motorRR.setSpeed(speed);
     break;
   }
 }
 
-void RoverClass::motorsEnable() { digitalWrite(PIN_MOT_STBY, HIGH); }
-void RoverClass::motorsDisable() { digitalWrite(PIN_MOT_STBY, LOW); }
+void RoverClass::motorsEnable() { digitalWrite(_pin_stby, HIGH); }
+void RoverClass::motorsDisable() { digitalWrite(_pin_stby, LOW); }
 
-void RoverClass::moveXYR(int8_t x, int8_t y, int8_t r) {
+void RoverClass::moveXYR(int16_t x, int16_t y, int16_t r) {
   // 1. Compute raw wheel speeds
-  int16_t fl = y + x - r;
-  int16_t fr = y - x + r;
-  int16_t rl = y - x - r;
-  int16_t rr = y + x + r;
+  int32_t fl = y + x - r;
+  int32_t fr = y - x + r;
+  int32_t rl = y - x - r;
+  int32_t rr = y + x + r;
 
   // 2. Find maximum magnitude
   int16_t maxVal = max(max(abs(fl), abs(fr)), max(abs(rl), abs(rr)));
-  // Serial.printf("fl: %d, fr: %d, rl: %d, rr: %d, Magnitude: %d\n", fl, fr,
-  // rl,                rr, maxVal);
+  //Serial.printf("fl: %d, fr: %d, rl: %d, rr: %d, Magnitude: %d\n", fl, fr, rl,
+    //            rr, maxVal);
 
   // 3. Normalize to fit -127..127
 
@@ -71,14 +72,15 @@ void RoverClass::moveXYR(int8_t x, int8_t y, int8_t r) {
   }
 
   //  4. Send to motors
-  motorFL.SetSpeed(fl);
-  motorFR.SetSpeed(fr);
-  motorRL.SetSpeed(rl);
-  motorRR.SetSpeed(rr);
+  motorFL.setSpeed(fl);
+  motorFR.setSpeed(fr);
+  motorRL.setSpeed(rl);
+  motorRR.setSpeed(rr);
 }
 
 void RoverClass::move(Direction dir, uint8_t speed) {
-  int8_t s = map(speed, 0, 100, 0, 100);
+  // int8_t s = map(speed, 0, 100, 0, 100);
+  int8_t s = speed;
 
   switch (dir) {
   case FORWARD:

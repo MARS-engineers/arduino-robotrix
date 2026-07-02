@@ -13,6 +13,7 @@
 
 class RoverClass {
 private:
+  pin_size_t _pin_stby = PIN_MOT_STBY;
 public:
   enum Direction : uint8_t {
     STOP = 0x00,
@@ -33,12 +34,12 @@ public:
   void stop(void);
   void stopSlow(void);
   void move(Direction dir, uint8_t speed);
-  void moveXYR(int8_t x, int8_t y, int8_t r);
+  void moveXYR(int16_t x, int16_t y, int16_t r);
   void motorsEnable();
   void motorsDisable();
-  void MotorRun(uint8_t motor, int8_t speed);
+  void motorRun(uint8_t motor, int8_t speed);
   void setMaxSpeed(uint8_t speed);
-  uint8_t maxSpeedValue = 127;
+  uint8_t maxSpeedValue = 255;
 };
 
 extern RoverClass Rover;
