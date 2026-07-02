@@ -18,6 +18,7 @@ public:
     static_cast<CommandRouter *>(context)->dispatch(data, len);
   }
 
+  void parsePacket(const uint8_t *data, uint8_t len);
 
   uint8_t makePacket(uint8_t *payload, uint8_t len, uint8_t telemetry_type,
                      uint8_t dest_address,

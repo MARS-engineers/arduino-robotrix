@@ -27,6 +27,7 @@ void CommandRouter::dispatch(const uint8_t *data, uint8_t len) {
   if (len < 2)
     return;
 
+  //parsePacket(data, len);
 
   everyCmdCb(data, len);
 
@@ -38,9 +39,15 @@ void CommandRouter::dispatch(const uint8_t *data, uint8_t len) {
   }
 }
 
+void CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
+  uint8_t address = data[0];
+  uint8_t data_len = data[1];
+  uint8_t telemetry_type = data[2];
+  uint8_t crc = data[data_len - 1];
+
 
   for (uint8_t i = 0; i < _count; i++) {
-    if (_table[i].cmd == cmd) {
+    if (_table[i].cmd == telemetry_type) {
       _table[i].cb(data, len);
       return;
     }
