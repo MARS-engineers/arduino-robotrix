@@ -1,19 +1,28 @@
 #pragma once
 #include <Arduino.h>
+#include <Wire.h>
 #include <cstdint>
 
-class I2cCommandBus {
-public:
+using CallbackCmdRouter = void (*)(void *context, const uint8_t *data,
+                                   uint8_t len);
 
-  void setup(uint8_t address = 0x55);
-  void send(uint8_t address, uint8_t *data, size_t size);
-  void debugOn(bool debug = true);
+class I2cDriver {
+public:
+  void setup(uint8_t address = 0x55, TwoWire *theWire = &Wire);
+  void callbackToCmdRouter(CallbackCmdRouter cb, void *ctx);
+  void write(uint8_t address, uint8_t *data, uint8_t size);
+  void debugOn(bool debug = true, Stream *DebugSerial = &Serial);
+
 private:
+  CallbackCmdRouter _CmdRouterCallback = nullptr;
+  void *_CmdRouterContext = nullptr;
+
   static void onReceiveStatic(int len);
   void onReceive(uint8_t len);
 
-  static I2cCommandBus *_instance;
-  bool _DebugOn = false;
-};
+  static I2cDriver *_instance;
 
-extern I2cCommandBus I2cDriver;
+  bool _DebugOn = false;
+  Stream *_DebugSerial;
+  TwoWire *_theWire;
+};

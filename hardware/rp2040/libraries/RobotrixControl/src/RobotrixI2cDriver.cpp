@@ -1,47 +1,56 @@
 #include "RobotrixI2cDriver.h"
 #include "RobotrixCommand.h"
-#include <Wire.h>
 #include <cstddef>
 #include <cstdint>
 
-I2cCommandBus I2cDriver;
-I2cCommandBus *I2cCommandBus::_instance = nullptr;
+I2cDriver *I2cDriver::_instance = nullptr;
 
-void I2cCommandBus::setup(uint8_t address) {
+void I2cDriver::setup(uint8_t address, TwoWire *theWire) {
   _instance = this;
-  CommandWire.begin(address);
-  CommandWire.onReceive(onReceiveStatic);
+  _theWire = theWire;
+  _theWire->begin(address);
+  _theWire->onReceive(onReceiveStatic);
 }
 
-void I2cCommandBus::send(uint8_t address, uint8_t *data, size_t size) {
+void I2cDriver::callbackToCmdRouter(CallbackCmdRouter cb, void *ctx) {
+  _CmdRouterCallback = cb;
+  _CmdRouterContext = ctx;
+}
+
+void I2cDriver::write(uint8_t address, uint8_t *data, uint8_t size) {
   if (_instance) {
-    CommandWire.writeAsync(address, data, size);
+    _theWire->writeAsync(address, data, size);
   }
 }
 
-void I2cCommandBus::onReceiveStatic(int len) {
+void I2cDriver::onReceiveStatic(int len) {
 
   if (_instance) {
     _instance->onReceive(len);
   }
 }
 
-void I2cCommandBus::debugOn(bool debug) { _DebugOn = debug; }
+void I2cDriver::debugOn(bool debug, Stream *DebugSerial) {
+  _DebugSerial = DebugSerial;
+  _DebugOn = debug;
+}
 
-void I2cCommandBus::onReceive(uint8_t len) {
+void I2cDriver::onReceive(uint8_t len) {
   uint8_t buf[16];
   uint8_t i = 0;
 
-  while (CommandWire.available() && i < sizeof(buf))
-    buf[i++] = CommandWire.read();
+  while (_theWire->available() && i < sizeof(buf))
+    buf[i++] = _theWire->read();
 
-  Remote.dispatch(buf, i);
+  if (_CmdRouterCallback) {
+    _CmdRouterCallback(_CmdRouterContext, buf, i);
+  }
 
   if (_DebugOn) {
-    Serial.printf("bytes: %i, data: ", len);
-    for (byte i = 0; i <= len; i++) {
-      Serial.printf(" %02x", buf[i]);
+    _DebugSerial->printf("bytes: %i, data: ", len);
+    for (uint8_t i = 0; i <= len; i++) {
+      _DebugSerial->printf(" %02x", buf[i]);
     }
-    Serial.println("");
+    _DebugSerial->println("");
   }
 }
