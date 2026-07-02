@@ -4,6 +4,12 @@
 
 CommandRouter Remote;
 
+void CommandRouter::setDeviceAddress(uint8_t address) {
+  _deviceAddress = address;
+}
+
+uint8_t CommandRouter::getDeviceAddress() { return _deviceAddress; }
+
 bool CommandRouter::registerCommand(uint8_t cmd, RemoteCallback cb) {
   if (_count >= MAX_CMDS || cb == nullptr)
     return false;
@@ -20,20 +26,18 @@ bool CommandRouter::registerOnReceive(RemoteCallback cb) {
 void CommandRouter::dispatch(const uint8_t *data, uint8_t len) {
   if (len < 2)
     return;
-  uint8_t cmd = data[0];
-  uint8_t subcmd = data[1];
+
 
   everyCmdCb(data, len);
 
-  /*  Serial.printf("I2C Cmd: 0x%02x, SubCmd: 0x%02x, Arg1: 0x%02x, Arg2:
-    0x%02x, " "Arg3: 0x%02x", data[0], data[1], data[2], data[3], data[4]);
-
-    Serial.printf("bytes: %i, data: ", len);
-    for (uint8_t i = 0; i <= len; i++) {
-      Serial.printf(" %02x", data[i]);
+  for (uint8_t i = 0; i < _count; i++) {
+    if (_table[i].cmd == data[0]) {
+      _table[i].cb(data, len);
+      return;
     }
-    Serial.println("");
-  */
+  }
+}
+
 
   for (uint8_t i = 0; i < _count; i++) {
     if (_table[i].cmd == cmd) {
@@ -41,6 +45,35 @@ void CommandRouter::dispatch(const uint8_t *data, uint8_t len) {
       return;
     }
   }
+}
+
+uint8_t CommandRouter::makePacket(
+    uint8_t *payload, uint8_t len, uint8_t telemetry_type, uint8_t dest_address,
+    void callbackToWrite(uint8_t address, const uint8_t *p, uint8_t len)) {
+
+  uint8_t buf[64]; // Init bufer
+  uint8_t i = 0;   // Init pointer
+
+  buf[i++] = _deviceAddress; // Add device address
+
+  uint8_t len_index = i++; // Reserve length (fill later)
+
+  buf[i++] = telemetry_type; // custom telemetry type
+
+  if (len > 60)
+    return 0; // Exit if payload len is > 60 bytes
+
+  for (uint8_t y = 0; y < len; y++) { // Add payload
+    buf[i++] = payload[y];
+  }
+
+  uint8_t payload_len = i - 2;      // type + payload
+  buf[len_index] = payload_len + 1; // + CRC
+
+  buf[i++] = crsf_crc8(&buf[2], payload_len + 1); // Add CRC
+
+  callbackToWrite(dest_address, buf, i);
+  return i;
 }
 
 CommandRouter::dataFormat CommandRouter::convertData(const uint8_t *data,
@@ -61,4 +94,19 @@ CommandRouter::dataFormat CommandRouter::convertData(const uint8_t *data,
   }
 
   return df;
+}
+
+// Vibecoded shit
+uint8_t CommandRouter::crsf_crc8(const uint8_t *ptr, uint8_t len) {
+  uint8_t crc = 0;
+  while (len--) {
+    crc ^= *ptr++;
+    for (uint8_t i = 0; i < 8; i++) {
+      if (crc & 0x80)
+        crc = (crc << 1) ^ 0xD5;
+      else
+        crc <<= 1;
+    }
+  }
+  return crc;
 }
