@@ -26,6 +26,11 @@ void UartDriver::Serial_poll() {
   }
 }
 
+void UartDriver::debugOn(bool debug, Stream *DebugSerial){
+  _DebugSerial = DebugSerial;
+  _DebugOn = debug;
+}
+
 void UartDriver::write(uint8_t address /*!!Unsused!!*/, uint8_t *data,
                        uint8_t size) {
   if (_instance) {
