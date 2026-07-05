@@ -1,6 +1,6 @@
 #include "./RobotrixMotors.h"
 
-Motor::Motor(int pin_en, int pin_a, int pin_b) {
+Motor::Motor(pin_size_t pin_en, pin_size_t pin_a, pin_size_t pin_b) {
   _pin_en = pin_en;
   _pin_a = pin_a;
   _pin_b = pin_b;
@@ -12,8 +12,9 @@ void Motor::setup() {
   pinMode(_pin_b, OUTPUT);
 }
 
-void Motor::SetSpeed(int8_t s) {
-  byte speed = map(abs(s), 0, 127, 0, _max_speed);
+void Motor::setSpeed(int16_t s) {
+  uint32_t speed = map(abs(s), 0, _max_speed, 0, 255);
+  //uint8_t speed = abs(s);
   bool d = s < 0;
   //Serial.printf("Set speed: %d, input %d\n", speed, s);
   analogWrite(_pin_en, speed);
