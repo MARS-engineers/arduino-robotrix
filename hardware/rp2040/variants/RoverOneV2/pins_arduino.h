@@ -4,7 +4,7 @@
 //    https://datasheets.raspberrypi.org/pico/pico-datasheet.pdf
 
 #define PICO_RP2350A __PICO_RP2350A
-#define RoverOne(V1)
+#define RoverOne(V2)
 #define HW_VERSION "0.1.0"
 
 // Motors encoders
@@ -60,7 +60,7 @@ enum SonarDirections : uint8_t { // Directions of sonars, channel
 #define PIN_SPI0_MISO (44u)
 #define PIN_SPI0_MOSI (43u)
 #define PIN_SPI0_SCK (42u)
-#define PIN_SPI0_SS (-1u)
+#define PIN_SPI0_SS (-1)
 
 // Wire
 #define PIN_WIRE0_SDA (26u)

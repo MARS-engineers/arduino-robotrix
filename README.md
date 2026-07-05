@@ -30,7 +30,7 @@ https://github.com/MARS-engineers/arduino-robotrix/releases/download/global/pack
 ## This package add support for MARS-Engineers custom boards
 ### Package includes
 - Robotrix Rover One v0.1 (first dev version)
-- Robotrix Rover One v1
+- Robotrix Rover One v2
 
 ## Attribution
 
