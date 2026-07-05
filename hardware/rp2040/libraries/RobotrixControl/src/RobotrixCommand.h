@@ -18,9 +18,7 @@ public:
     static_cast<CommandRouter *>(context)->dispatch(data, len);
   }
 
-  void setCheckCrc(bool b){
-    _checkCrc = b;
-  }
+  void setCheckCrc(bool b) { _checkCrc = b; }
 
   uint8_t parsePacket(const uint8_t *data, uint8_t len);
 
@@ -44,6 +42,7 @@ private:
     RemoteCallback cb;
   };
   RemoteCallback everyCmdCb;
+
   uint8_t _deviceAddress;
   static constexpr uint8_t MAX_CMDS = 16;
   Entry _table[MAX_CMDS];

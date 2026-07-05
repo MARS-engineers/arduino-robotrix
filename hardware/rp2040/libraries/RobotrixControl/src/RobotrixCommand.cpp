@@ -52,7 +52,7 @@ uint8_t CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
   }
 
   if (_checkCrc) {
-    uint8_t calc = crc8(&data[2], data_len +1);
+    uint8_t calc = crc8(&data[2], data_len);
 
     if (crc != calc) {
       return 0;
