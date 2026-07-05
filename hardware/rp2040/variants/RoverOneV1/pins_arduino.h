@@ -42,17 +42,16 @@
 #define PIN_SERIAL2_TX (36u)
 #define PIN_SERIAL2_RX (37u)
 
-
 // Sonars
 #define PIN_SONAR_IRQ (30u)
 #define SONAR_ADDRESS 0x20
 enum SonarDirections : uint8_t { // Directions of sonars, channel
   Front = 0,
   Front_L = 1,
-  Front_R = 2,
-  Left = 3,
-  Right = 4,
-  Back = 5,
+  Left = 2,
+  Back = 3,
+  Front_R = 4,
+  Right = 5,
   Aux_A = 6,
   Aux_B = 7
 };
