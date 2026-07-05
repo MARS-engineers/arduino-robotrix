@@ -1,11 +1,14 @@
 #pragma once
 #include <cstdint>
 #include <stdint.h>
+#include <Arduino.h>
 
 using RemoteCallback = void (*)(const uint8_t *data, uint8_t data_len);
 
 class CommandRouter {
 public:
+  void debugOn(bool debug = true, Stream *DebugSerial = &Serial);
+
   void setDeviceAddress(uint8_t address);
   uint8_t getDeviceAddress();
 
@@ -35,6 +38,9 @@ public:
   dataFormat convertData(const uint8_t *data, uint8_t len);
 
 private:
+  bool _DebugOn = false;
+  Stream *_DebugSerial;
+
   bool _checkCrc = true;
   uint8_t crc8(const uint8_t *ptr, uint8_t len);
   struct Entry {

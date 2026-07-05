@@ -7,6 +7,10 @@ CommandRouter Remote;
 void CommandRouter::setDeviceAddress(uint8_t address) {
   _deviceAddress = address;
 }
+void CommandRouter::debugOn(bool debug, Stream *DebugSerial) {
+  _DebugSerial = DebugSerial;
+  _DebugOn = debug;
+}
 
 uint8_t CommandRouter::getDeviceAddress() { return _deviceAddress; }
 
@@ -44,6 +48,7 @@ uint8_t CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
   uint8_t data_len = data[1];
   uint8_t telemetry_type = data[2];
   uint8_t crc = data[data_len - 1];
+  uint8_t crc_calc = crc8(&data[2], data_len);
 
   uint8_t payload[60];
 
@@ -51,10 +56,18 @@ uint8_t CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
     payload[i] = data[i + 3];
   }
 
-  if (_checkCrc) {
-    uint8_t calc = crc8(&data[2], data_len);
+  if (_DebugOn) {
+    _DebugSerial->printf("Address: %i, type: %i, crc: %i, crc_calc: %i", address, telemetry_type, crc, crc_calc);
+    _DebugSerial->printf("bytes: %i, data: ", data_len);
+    for (uint8_t i = 0; i <= len; i++) {
+      _DebugSerial->printf(" %02x", payload[i]);
+    }
+    _DebugSerial->println("");
+  }
 
-    if (crc != calc) {
+  if (_checkCrc) {
+
+    if (crc != crc_calc) {
       return 0;
     }
   }
