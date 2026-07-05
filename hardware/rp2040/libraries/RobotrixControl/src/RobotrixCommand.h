@@ -18,6 +18,10 @@ public:
     static_cast<CommandRouter *>(context)->dispatch(data, len);
   }
 
+  void setCheckCrc(bool b){
+    _checkCrc = b;
+  }
+
   void parsePacket(const uint8_t *data, uint8_t len);
 
   uint8_t makePacket(uint8_t *payload, uint8_t len, uint8_t telemetry_type,
@@ -33,6 +37,7 @@ public:
   dataFormat convertData(const uint8_t *data, uint8_t len);
 
 private:
+  bool _checkCrc = false;
   uint8_t crsf_crc8(const uint8_t *ptr, uint8_t len);
   struct Entry {
     uint8_t cmd;
