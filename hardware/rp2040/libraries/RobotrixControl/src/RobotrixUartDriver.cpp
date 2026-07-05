@@ -5,8 +5,7 @@
 
 UartDriver *UartDriver::_instance = nullptr;
 
-void UartDriver::setup(unsigned long baud,
-                       HardwareSerial *serialPort) {
+void UartDriver::setup(unsigned long baud, HardwareSerial *serialPort) {
   _instance = this;
   _Serial = serialPort;
   _Serial->begin(baud);
@@ -17,7 +16,7 @@ void UartDriver::callbackToCmdRouter(CallbackCmdRouter cb, void *ctx) {
   _CmdRouterContext = ctx;
 }
 
-void UartDriver::Serial_poll() {
+void UartDriver::serial_poll() {
   int bytes = _Serial->available();
 
   if (bytes) {
@@ -25,12 +24,12 @@ void UartDriver::Serial_poll() {
   }
 }
 
-void UartDriver::debugOn(bool debug, Stream *DebugSerial){
+void UartDriver::debugOn(bool debug, Stream *DebugSerial) {
   _DebugSerial = DebugSerial;
   _DebugOn = debug;
 }
 
-void UartDriver::write(uint8_t address /*!!Unsused!!*/, uint8_t *data,
+void UartDriver::write(uint8_t address /*!!Unsused!!*/, const uint8_t *data,
                        uint8_t size) {
   if (_instance) {
     _Serial->write(data, size);
@@ -43,6 +42,14 @@ void UartDriver::onReceive(uint8_t len) {
 
   while (_Serial->available() && i < sizeof(buf)) {
     buf[i++] = _Serial->read();
+  }
+
+  if (_DebugOn) {
+    _DebugSerial->printf("bytes: %i, data: ", len);
+    for (uint8_t i = 0; i <= len; i++) {
+      _DebugSerial->printf(" %02x", buf[i]);
+    }
+    _DebugSerial->println("");
   }
 
   if (_CmdRouterCallback) {
