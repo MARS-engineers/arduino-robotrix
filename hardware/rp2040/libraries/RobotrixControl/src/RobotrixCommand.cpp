@@ -82,7 +82,7 @@ uint8_t CommandRouter::makePacket(
   uint8_t payload_len = i - 2;      // type + payload
   buf[len_index] = payload_len + 1; // + CRC
 
-  buf[i++] = crsf_crc8(&buf[2], payload_len + 1); // Add CRC
+  buf[i++] = crc8(&buf[2], payload_len + 1); // Add CRC
 
   callbackToWrite(dest_address, buf, i);
   return i;
@@ -109,7 +109,7 @@ CommandRouter::dataFormat CommandRouter::convertData(const uint8_t *data,
 }
 
 // Vibecoded shit
-uint8_t CommandRouter::crsf_crc8(const uint8_t *ptr, uint8_t len) {
+uint8_t CommandRouter::crc8(const uint8_t *ptr, uint8_t len) {
   uint8_t crc = 0;
   while (len--) {
     crc ^= *ptr++;

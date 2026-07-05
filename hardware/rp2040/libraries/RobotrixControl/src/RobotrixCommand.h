@@ -38,7 +38,7 @@ public:
 
 private:
   bool _checkCrc = false;
-  uint8_t crsf_crc8(const uint8_t *ptr, uint8_t len);
+  uint8_t crc8(const uint8_t *ptr, uint8_t len);
   struct Entry {
     uint8_t cmd;
     RemoteCallback cb;
