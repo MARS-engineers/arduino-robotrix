@@ -37,7 +37,7 @@ public:
   dataFormat convertData(const uint8_t *data, uint8_t len);
 
 private:
-  bool _checkCrc = false;
+  bool _checkCrc = true;
   uint8_t crc8(const uint8_t *ptr, uint8_t len);
   struct Entry {
     uint8_t cmd;
