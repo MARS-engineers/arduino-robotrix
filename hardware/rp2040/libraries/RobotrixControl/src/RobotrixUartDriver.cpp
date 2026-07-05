@@ -5,10 +5,9 @@
 
 UartDriver *UartDriver::_instance = nullptr;
 
-void UartDriver::setup(uint8_t address, unsigned long baud,
+void UartDriver::setup(unsigned long baud,
                        HardwareSerial *serialPort) {
   _instance = this;
-  _address = address;
   _Serial = serialPort;
   _Serial->begin(baud);
 }

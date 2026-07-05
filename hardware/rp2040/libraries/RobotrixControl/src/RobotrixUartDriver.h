@@ -7,7 +7,7 @@ using CallbackCmdRouter = void (*)(void *context, const uint8_t *data,
 
 class UartDriver {
 public:
-  void setup(uint8_t address, unsigned long baud, HardwareSerial *serialPort);
+  void setup(unsigned long baud, HardwareSerial *serialPort);
   void write(uint8_t address /*!!Unsused!!*/, uint8_t *data, uint8_t size);
   void debugOn(bool debug = true, Stream *DebugSerial = &Serial);
   void Serial_poll();
@@ -21,7 +21,6 @@ private:
 
   void onReceive(uint8_t len);
   bool _DebugOn = false;
-  uint8_t _address;
   Stream *_DebugSerial;
   HardwareSerial *_Serial;
 };
