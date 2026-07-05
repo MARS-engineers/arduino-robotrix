@@ -39,24 +39,34 @@ void CommandRouter::dispatch(const uint8_t *data, uint8_t len) {
   }
 }
 
-void CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
+uint8_t CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
   uint8_t address = data[0];
   uint8_t data_len = data[1];
   uint8_t telemetry_type = data[2];
   uint8_t crc = data[data_len - 1];
 
   uint8_t payload[60];
-  
-  for (uint8_t i = 0; i < data_len; i++) {
-    payload[i] = data[i+2];
+
+  for (uint8_t i = 0; i < data_len - 1; i++) {
+    payload[i] = data[i + 3];
+  }
+
+  if (_checkCrc) {
+    uint8_t calc = crc8(&data[2], data_len +1);
+
+    if (crc != calc) {
+      return 0;
+    }
   }
 
   for (uint8_t i = 0; i < _count; i++) {
     if (_table[i].cmd == telemetry_type) {
       _table[i].cb(payload, len);
-      return;
+      return data_len;
     }
   }
+  
+  return 0;
 }
 
 uint8_t CommandRouter::makePacket(
