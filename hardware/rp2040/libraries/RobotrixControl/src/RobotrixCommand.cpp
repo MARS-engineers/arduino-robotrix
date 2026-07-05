@@ -62,11 +62,10 @@ uint8_t CommandRouter::parsePacket(const uint8_t *data, uint8_t len) {
   for (uint8_t i = 0; i < _count; i++) {
     if (_table[i].cmd == telemetry_type) {
       _table[i].cb(payload, len);
-      return data_len;
     }
   }
-  
-  return 0;
+
+  return data_len;
 }
 
 uint8_t CommandRouter::makePacket(
