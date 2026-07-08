@@ -63,16 +63,18 @@ enum SonarDirections : uint8_t { // Directions of sonars, channel
 #define PIN_SPI0_SS (-1)
 
 // Wire
-#define PIN_WIRE0_SDA (26u)
-#define PIN_WIRE0_SCL (27u)
+#define PIN_WIRE1_SDA (26u)
+#define PIN_WIRE1_SCL (27u)
 
-#define PIN_WIRE1_SDA (28u)
-#define PIN_WIRE1_SCL (29u)
+#define PIN_WIRE0_SDA (28u)
+#define PIN_WIRE0_SCL (29u)
 
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 
-#define CommandWire &Wire1
+#define CommandWire Wire1
+#define SonarWire Wire
+
 #define CRFSUart &Serial2
 
 #define PIN_RADIO_CE (46)
