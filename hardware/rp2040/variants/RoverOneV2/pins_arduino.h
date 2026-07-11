@@ -37,10 +37,13 @@
 // Serial0
 #define PIN_SERIAL1_TX (32u)
 #define PIN_SERIAL1_RX (33u)
+#define UART0 Serial1
 
 // Serial1
 #define PIN_SERIAL2_TX (36u)
 #define PIN_SERIAL2_RX (37u)
+#define UART1 Serial2
+
 
 // Sonars
 #define PIN_SONAR_IRQ (30u)

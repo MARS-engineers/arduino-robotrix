@@ -35,10 +35,11 @@
 // Serial
 #define PIN_SERIAL1_TX (0u)
 #define PIN_SERIAL1_RX (1u)
+#define UART0 Serial1
 
-//SERIAL2 WILL NOT WORK! it uses uart0, same as SERIAL1
-#define PIN_SERIAL2_TX (-1)
-#define PIN_SERIAL2_RX (-1)
+#define PIN_SERIAL2_TX (24u)
+#define PIN_SERIAL2_RX (21u)
+#define UART1 Serial2
 
 // SPI
 #define PIN_SPI0_MISO  (-1)
@@ -56,6 +57,8 @@
 #define InputSensorWire &Wire1
 #define INPUT_SENSOR_ADDRESS 0x40
 #define CommandWire Wire1
+#define SonarWire Wire
+
 #define CRFSUart &Serial1   // CRFS is connected to debug port. !disconnect RS232 chip. (lift up the pins)
 
 // Radio
