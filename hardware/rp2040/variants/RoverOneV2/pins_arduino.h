@@ -32,7 +32,7 @@
 #define PIN_MOT_STBY (24u)
 
 // LED
-#define PIN_LED (26u)
+#define PIN_LED (25u)
 
 // Serial0
 #define PIN_SERIAL1_TX (32u)
