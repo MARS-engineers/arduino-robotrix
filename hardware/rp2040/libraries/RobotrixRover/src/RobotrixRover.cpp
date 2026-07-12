@@ -84,16 +84,16 @@ void RoverClass::move(Direction dir, uint8_t speed) {
 
   switch (dir) {
   case FORWARD:
-    moveXYR(s, 0, 0);
+    moveXYR(0, s, 0);
     break;
   case BACKWARD:
-    moveXYR(-s, 0, 0);
+    moveXYR(0,s, 0);
     break;
   case SLIDE_LEFT:
-    moveXYR(0, -s, 0);
+    moveXYR(-s, 0, 0);
     break;
   case SLIDE_RIGHT:
-    moveXYR(0, s, 0);
+    moveXYR(s, 0, 0);
     break;
   case ROTATE_LEFT:
     moveXYR(0, 0, -s);
