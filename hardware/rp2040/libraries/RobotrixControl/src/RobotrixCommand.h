@@ -7,7 +7,7 @@ using RemoteCallback = void (*)(const uint8_t *data, uint8_t data_len);
 
 class CommandRouter {
 public:
-  void debugOn(bool debug = true, Stream *DebugSerial = &Serial);
+  void debugOn(uint8_t debug = 1, Stream *DebugSerial = &Serial);
 
   void setDeviceAddress(uint8_t address);
   uint8_t getDeviceAddress();
@@ -37,8 +37,12 @@ public:
 
   dataFormat convertData(const uint8_t *data, uint8_t len);
 
+  void poll(HardwareSerial *serialPort);
+  void onReceive(HardwareSerial *serialPort);
+
+
 private:
-  bool _DebugOn = false;
+  uint8_t _Debug = 0;
   Stream *_DebugSerial;
 
   bool _checkCrc = true;
