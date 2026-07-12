@@ -66,7 +66,7 @@
 #define PIN_RADIO_CSN (-1)
 #define PIN_RADIO_IRQ (-1)
 
-#define PIN_RGB_LEDS (-1)
+#define PIN_STATUS_LEDS (-1)
 
 #define SERIAL_HOWMANY (2u)
 #define SPI_HOWMANY    (0u)

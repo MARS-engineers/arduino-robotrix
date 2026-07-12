@@ -84,7 +84,7 @@ enum SonarDirections : uint8_t { // Directions of sonars, channel
 #define PIN_RADIO_CSN (47)
 #define PIN_RADIO_IRQ (45)
 
-#define PIN_RGB_LEDS (31)
+#define PIN_STATUS_LEDS (31)
 
 #define SERIAL_HOWMANY (2u)
 #define SPI_HOWMANY (1u)
