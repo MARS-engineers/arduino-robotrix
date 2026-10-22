@@ -7,3 +7,6 @@
 [submodule "hardware/rp2040/libraries/RobotrixSonars/src/OctoSonar"]
 	path = hardware/rp2040/libraries/RobotrixSonars/src/OctoSonar
 	url = https://github.com/arielnh56/OctoSonar.git
+[submodule "hardware/rp2040/libraries/PMW3901Uart"]
+	path = hardware/rp2040/libraries/PMW3901Uart
+	url = https://github.com/MARS-engineers/PMW3901Uart.git
