@@ -190,7 +190,7 @@ debug.toolchain.prefix={build.toolchain}-
 debug.server=openocd
 debug.server.openocd.path={runtime.tools.pqt-openocd.path}/bin/openocd
 debug.server.openocd.scripts_dir={runtime.tools.pqt-openocd.path}/share/openocd/scripts/
-debug.server.openocd.script={compiler.path}/lib/{build.chip}/{build.debugscript}
+debug.server.openocd.script={runtime.platform.path}/lib/{build.chip}/{build.debugscript}
 
 
 
