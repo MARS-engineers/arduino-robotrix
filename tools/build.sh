@@ -19,6 +19,7 @@ mkdir -p $TEMP_PATH
 rm -f "$ZIP_PATH"
 
 cd hardware
+bash tools/updateSubmodules.sh
 zip -rq ../"$ZIP_PATH" rp2040
 cd ..
 
