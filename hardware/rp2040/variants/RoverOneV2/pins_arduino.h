@@ -44,6 +44,8 @@
 #define PIN_SERIAL2_RX (37u)
 #define UART1 Serial2
 
+// Buzzer
+#define PIN_BUZZER (38u)
 
 // Sonars
 #define PIN_SONAR_IRQ (30u)
@@ -58,36 +60,34 @@ enum SonarDirections : uint8_t { // Directions of sonars, channel
   Aux_A = 6,
   Aux_B = 7
 };
-
-// SPI
-#define PIN_SPI0_MISO (44u)
-#define PIN_SPI0_MOSI (43u)
-#define PIN_SPI0_SCK (42u)
-#define PIN_SPI0_SS (-1)
+#define PIN_RADIO_CE (46)
+#define PIN_RADIO_CSN (PIN_SPI1_SS)
+#define PIN_RADIO_IRQ (45)
 
 // Wire
 #define PIN_WIRE1_SDA (26u)
 #define PIN_WIRE1_SCL (27u)
+#define I2C1 Wire1
 
 #define PIN_WIRE0_SDA (28u)
 #define PIN_WIRE0_SCL (29u)
+#define I2C0 Wire
 
-#define InputSensorWire &Wire1
-#define INPUT_SENSOR_ADDRESS 0x40
+// SPI
+#define PIN_SPI0_MISO  (16u)
+#define PIN_SPI0_MOSI  (19u)
+#define PIN_SPI0_SCK   (18u)
+#define PIN_SPI0_SS    (17u)
 
-#define CommandWire Wire1
-#define SonarWire Wire
-
-#define CRFSUart &Serial2
-
-#define PIN_RADIO_CE (46)
-#define PIN_RADIO_CSN (47)
-#define PIN_RADIO_IRQ (45)
+#define PIN_SPI1_MISO (44u) //SPI1_RX
+#define PIN_SPI1_MOSI (43u) //SPI1_TX
+#define PIN_SPI1_SCK (42u)  //SPI1_SCK
+#define PIN_SPI1_SS (47)
 
 #define PIN_STATUS_LEDS (31)
 
 #define SERIAL_HOWMANY (2u)
-#define SPI_HOWMANY (1u)
+#define SPI_HOWMANY (2u)
 #define WIRE_HOWMANY (2u)
 
 #include "../common.h"
